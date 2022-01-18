@@ -1,7 +1,10 @@
-@charset "UTF-8";
 /*нормируем*/
 @import url(../vendors/normalize.css);
+
 /*подключаем шрифты*/
 @import url(../vendors/fonts/fonts.css);
+
 /*бодируем*/
-@import url(../blocks/root/root.css);/*# sourceMappingURL=index.css.map */
+@import url(../blocks/root/root.css);
+
+$primarycolor : #6544ff;

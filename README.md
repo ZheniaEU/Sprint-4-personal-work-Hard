@@ -18,8 +18,8 @@ ___
 ## **Cтек технологий применённый в данном проекте**  
 <br>
 
-![](https://img.shields.io/badge/&zwnj;-JavaScript-informational?style=flat&logo=JavaScript&logoColor=yellow&color=2bbc8a)   ![](https://img.shields.io/badge/&zwnj;-Sass-informational?style=flat&logo=Sass&logoColor=cc6699&color=2bbc8a)   ![](https://img.shields.io/badge/&zwnj;-HTML5-informational?style=flat&logo=HTML5&logoColor=yellowwhite&color=2bbc8a)   ![](https://img.shields.io/badge/&zwnj;-CSS3-informational?style=flat&logo=CSS3&logoColor=00aeff&color=2bbc8a)   ![](https://img.shields.io/badge/&zwnj;-BEM____Nested-informational?style=flat&logo=BEM&logoColor=white&color=2bbc8a)   
+![](https://img.shields.io/badge/&zwnj;-JavaScript-informational?style=flat&logo=JavaScript&logoColor=yellow&color=2bbc8a)   ![](https://img.shields.io/badge/&zwnj;-Scss-informational?style=flat&logo=Sass&logoColor=cc6699&color=2bbc8a)   ![](https://img.shields.io/badge/&zwnj;-HTML5-informational?style=flat&logo=HTML5&logoColor=yellowwhite&color=2bbc8a)   ![](https://img.shields.io/badge/&zwnj;-CSS3-informational?style=flat&logo=CSS3&logoColor=00aeff&color=2bbc8a)   ![](https://img.shields.io/badge/&zwnj;-BEM____Nested-informational?style=flat&logo=BEM&logoColor=white&color=2bbc8a)   
 
 ___
 **GitHub Pages** 
-https://zheniaeu.github.io
+https://zheniaeu.github.io/Sprint-4-personal-work-Hard-01
