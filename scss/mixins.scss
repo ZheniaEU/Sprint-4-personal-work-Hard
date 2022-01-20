@@ -1,0 +1,17 @@
+/* вот как то так и никак иначе*/
+// @mixin my-border($color, $width) {
+//    border {
+//       color: $color;
+//       border-style: solid;
+//       width: $width;
+//    }
+// }
+
+
+@mixin large-text {
+   font: {
+     size: 30px;
+     weight: bold;
+   }
+   color: red;
+ }

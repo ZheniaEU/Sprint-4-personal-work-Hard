@@ -4,6 +4,13 @@
 //подключаем шрифты
 @import url(../vendors/fonts/fonts.css);
 
-//бодируем
-@import url(../blocks/root/root.css);
+//михины
+@import url(../scss/mixins.css);
 
+//бодируем
+@import url(../scss//blocks/root/root.css);
+
+//хедер
+@import url(../scss/blocks/header/header.css);
+
+//

@@ -1,4 +1,4 @@
-# Sprint-4-personal-work-Hard-01
+# Sprint-4-personal-work-Hard
 
 # **Редми не заполнено, приходите позже**
 
@@ -22,4 +22,4 @@ ___
 
 ___
 **GitHub Pages** 
-https://zheniaeu.github.io/Sprint-4-personal-work-Hard-01
+https://zheniaeu.github.io/Sprint-4-personal-work-Hard/
