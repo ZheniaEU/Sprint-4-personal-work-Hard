@@ -1,16 +1,15 @@
 //нормируем
-@import url(../vendors/normalize.css);
+@import "./../vendors/normalize.css";
 
 //подключаем шрифты
-@import url(../vendors/fonts/fonts.css);
+@import "./../vendors/fonts/fonts.css";
 
 //михины
-@import url(../scss/mixins.css);
+@import "./../scss/mixins.scss";
 
 //бодируем
-@import url(../scss//blocks/root/root.css);
+@import "./../scss//blocks/root/root.scss)";
 
 //хедер
-@import url(../scss/blocks/header/header.css);
+@import "./../scss/blocks/header/header.scss";
 
-//

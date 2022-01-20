@@ -5,7 +5,7 @@ header {
   max-width: 100%;
 }
 header .header__links {
-  font-size: 30px;
+  font-size: 20px;
 }
 header button {
   outline: solid 2px red;
