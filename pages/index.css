@@ -1,5 +1,5 @@
-@import "./../vendors/normalize.css";
-@import "./../vendors/fonts/fonts.css";
+@import url(e:\dev\Sprint-4-personal-work-Hard\vendors\normalize.css);
+@import url(e:\dev\Sprint-4-personal-work-Hard\vendors\fonts\fonts.css);
 * {
   margin: 0;
   padding: 0;
@@ -10,9 +10,11 @@
 button {
   cursor: pointer;
 }
+
 button:hover {
   opacity: 80%;
 }
+
 button:focus {
   outline: 3px solid dodgerblue;
 }
@@ -22,7 +24,7 @@ button:focus {
   min-width: 300px;
   margin: 0 auto;
   background-color: white;
-  font-family: "Inter", Tahoma, sans-serif;
+  font-family: 'Inter', Tahoma, sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -31,17 +33,32 @@ button:focus {
   -moz-text-size-adjust: 100%;
 }
 
-header {
+.header {
   min-height: 74px;
-  background-color: aqua;
-  outline: purple 2px solid;
+  background-color: #ff831e;
   max-width: 100%;
 }
-header .header__links {
-  font-size: 30px;
-  font-weight: bold;
-  color: red;
+
+.header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
-header button {
-  outline: solid 2px red;
-}/*# sourceMappingURL=index.css.map */
+
+.header__links {
+  font-weight: 14px;
+  color: black;
+}
+
+.header_burger {
+  cursor: pointer;
+}
+
+.header_burger:hover {
+  opacity: 10%;
+}
+
+.header_burger:focus {
+  outline: 3px solid dodgerblue;
+}
+/*# sourceMappingURL=index.css.map */

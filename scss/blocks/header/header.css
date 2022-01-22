@@ -1,12 +1,29 @@
-header {
+.header {
   min-height: 74px;
-  background-color: aqua;
-  outline: purple 2px solid;
+  background-color: #469751;
   max-width: 100%;
 }
-header .header__links {
-  font-size: 20px;
+
+.header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
-header button {
-  outline: solid 2px red;
-}/*# sourceMappingURL=header.css.map */
+
+.header__links {
+  font-weight: 14px;
+  color: black;
+}
+
+.header_burger {
+  cursor: pointer;
+}
+
+.header_burger:hover {
+  opacity: 10%;
+}
+
+.header_burger:focus {
+  outline: 3px solid dodgerblue;
+}
+/*# sourceMappingURL=header.css.map */
