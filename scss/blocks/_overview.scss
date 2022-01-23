@@ -1,0 +1,27 @@
+.overview{
+   background-color: #F4F4F4;
+   outline: aqua 2px solid;
+   display: flex;
+   padding-left: 120px;
+
+
+   &__titel{
+      @include text(55px, 60px, 700);
+      padding-top: 80px;
+      letter-spacing: -0.5px;
+      white-space: pre-line;
+      width: 460px;
+   }
+
+   &__text{
+      margin-right: auto;
+      max-width: 460px;
+   }
+
+
+   &__place{
+      align-self: flex-end;
+      padding-top: 20px;
+      margin-left: auto;
+   }
+}

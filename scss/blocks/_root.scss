@@ -2,31 +2,12 @@
 //Сам гугл молчит по этому поводу!
 //"Госпажа ревьюер почему? почему я не могу этого делать? что в этом креминального?
 //Я понимаю, что есть такое требование брифа, но мне интересно почему? Ничего не сломается! я не буду дублировать код!
-*{
-   margin: 0;
-   padding: 0;
-   border: 0;
-   text-decoration: none;
-   }
-
-button{
-   cursor: pointer;
-
-   &:hover {
-      opacity: 80%;
-   }
-
-   &:focus {
-      outline: 3px solid dodgerblue;
-   }
-}
-
-.root{
+.root {
    max-width: 1440px;
    min-width: 300px;
    margin: 0 auto;
    background-color: white;
-   font-family: 'Inter', Tahoma, sans-serif;
+   font-family: "Inter", Tahoma, sans-serif;
    text-rendering: optimizeLegibility;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
