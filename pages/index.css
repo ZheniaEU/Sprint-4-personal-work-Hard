@@ -59,6 +59,10 @@
 .overview {
   background-color: #f4f4f4;
   outline: aqua 2px solid;
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  grid-template-columns: minmax(200px, 1fr) 1fr minmax(300px, 1fr);
+  justify-content: space-between;
   padding-left: 120px;
   position: relative;
 }
@@ -74,7 +78,7 @@
   width: 460px;
 }
 .overview__text {
-  margin-right: auto;
+  margin: 0;
   max-width: 460px;
 }
 .overview__place {
@@ -112,4 +116,34 @@
   cursor: pointer;
   transform-origin: top;
   transform: rotateX(90deg);
+}
+.overview__button:focus {
+  outline: dodgerblue 3px solid;
+}
+.overview__bike {
+  position: -webkit-sticky;
+  position: sticky;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 20px;
+  padding: 20px 50px;
+  box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.44);
+}
+.overview__name {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.overview__name:after {
+  content: "";
+  position: absolute;
+  margin: 0;
+  width: 132px;
+  height: 2px;
+  left: 224px;
+  top: 9px;
+  background: #d7d4d4;
 }
