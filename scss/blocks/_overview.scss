@@ -2,33 +2,46 @@
    background-color: #f4f4f4;
    outline: aqua 2px solid;
    display: grid;
-   grid-template-rows: repeat(4, auto);
-   grid-template-columns: minmax(200px, 1fr) 1fr minmax(300px, 1fr);
+   // grid-template-rows: repeat (4, auto);
+   grid-auto-rows: auto;
+   grid-template-columns: minmax(200px,410px) 0px minmax(200px,610px);
    justify-content: space-between;
-// расковырять грид ариа
+   grid-template-areas:
+   "titel . place"
+   "text . place"
+   "button . place"
+   "name . place"
+   "name . place"
+   "name . place"
+   "name . place"
+   ". bike .";
    padding-left: 120px;
    position: relative;
 
    &__titel {
       @include text(55px, 60px, 700);
-      padding-top: 80px;
+      grid-area: titel;
+      margin-top: 80px;
       letter-spacing: -0.5px;
       white-space: pre-line;
       width: 460px;
    }
 
    &__text {
+      @include text(18px, 28px, 400);
+      grid-area: text;
       margin: 0;
       max-width: 460px;
    }
 
    &__place {
-      align-self: flex-end;
+      grid-area: place;
       padding-top: 20px;
-      margin-left: auto;
+      width: 100%;
    }
 
    &__button {
+      grid-area: button;
       @include text(14px, 18px, 600);
       width: 180px;
       height: 50px;
@@ -79,14 +92,19 @@
 
    //что что с этой картинкой не так? что с ней происходит?
    &__bike {
+      grid-area: bike;
+      // margin-bottom: 79px;
       position: sticky;
-      object-fit: contain;
+      object-fit: cover;
       border-radius: 20px;
       padding: 20px 50px;
+      background: #F4F4F4;
+      z-index: 1;
       box-shadow: -20px 60px 220px rgba(0, 0, 0, 44%);
    }
 
    &__name {
+      grid-area: name;
       @include text(18px, 18px, 400);
       position: relative;
       // display: block;

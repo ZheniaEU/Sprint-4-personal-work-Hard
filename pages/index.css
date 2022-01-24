@@ -16,13 +16,13 @@
 
 .header {
   min-height: 74px;
-  background-color: #F4F4F4;
+  background-color: #f4f4f4;
   outline: purple 2px solid;
   max-width: 100%;
 }
 .header__nav {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 .header__links {
   font-size: 14px;
@@ -30,9 +30,9 @@
   font-weight: 500;
   margin: 0;
   padding: 0;
-  margin-right: 34px;
-  justify-content: end;
   color: #151515;
+  margin-right: 34px;
+  text-decoration: none;
 }
 .header__links:hover {
   opacity: 75%;
@@ -60,9 +60,10 @@
   background-color: #f4f4f4;
   outline: aqua 2px solid;
   display: grid;
-  grid-template-rows: repeat(4, auto);
-  grid-template-columns: minmax(200px, 1fr) 1fr minmax(300px, 1fr);
+  grid-auto-rows: auto;
+  grid-template-columns: minmax(200px, 410px) 0px minmax(200px, 610px);
   justify-content: space-between;
+  grid-template-areas: "titel . place" "text . place" "button . place" "name . place" "name . place" "name . place" "name . place" ". bike .";
   padding-left: 120px;
   position: relative;
 }
@@ -72,21 +73,29 @@
   font-weight: 700;
   margin: 0;
   padding: 0;
-  padding-top: 80px;
+  grid-area: titel;
+  margin-top: 80px;
   letter-spacing: -0.5px;
   white-space: pre-line;
   width: 460px;
 }
 .overview__text {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  grid-area: text;
   margin: 0;
   max-width: 460px;
 }
 .overview__place {
-  align-self: flex-end;
+  grid-area: place;
   padding-top: 20px;
-  margin-left: auto;
+  width: 100%;
 }
 .overview__button {
+  grid-area: button;
   font-size: 14px;
   line-height: 18px;
   font-weight: 600;
@@ -121,15 +130,19 @@
   outline: dodgerblue 3px solid;
 }
 .overview__bike {
+  grid-area: bike;
   position: -webkit-sticky;
   position: sticky;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 20px;
   padding: 20px 50px;
+  background: #F4F4F4;
+  z-index: 1;
   box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.44);
 }
 .overview__name {
+  grid-area: name;
   font-size: 18px;
   line-height: 18px;
   font-weight: 400;

@@ -1,41 +1,42 @@
-.header{
+.header {
    min-height: 74px;
-   background-color: #F4F4F4;
-    outline: purple 2px solid;
+   background-color: #f4f4f4;
+   outline: purple 2px solid;
    max-width: 100%;
 
-   &__nav{
+   &__nav {
       display: flex;
-      justify-content: end;
+      justify-content: flex-end;
    }
 
-   &__links{
+   &__links {
       @include text(14px, 18px, 500);
-      margin-right: 34px;
-      justify-content: end;
       color: $fcolor1;
+      margin-right: 34px;
+      text-decoration: none;
 
-      &:hover{
+      &:hover {
          opacity: 75%;
       }
 
-      &:last-child{
+      &:last-child {
          margin-right: 120px;
       }
    }
 
-   &__burger{
+   &__burger {
       cursor: pointer;
       visibility: hidden;
 
       @media screen and (max-width: 600px) {
          visibility: visible;
       }
-      &:hover{
+
+      &:hover {
          opacity: 60%;
       }
 
-      &:focus{
+      &:focus {
          outline: 3px solid dodgerblue;
       }
    }
