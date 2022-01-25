@@ -57,13 +57,14 @@
 }
 
 .overview {
-  background-color: #F4F4F4;
-  outline: aqua 2px solid;
-  display: grid;
-  grid-template-columns: minmax(200px, 410px) 0px minmax(200px, 610px);
-  justify-content: space-between;
+  padding-top: 20px;
   padding-left: 120px;
+  background-color: #f4f4f4;
+  display: grid;
+  grid-template-columns: minmax(200px, 410px) 10px minmax(200px, 610px);
+  justify-content: space-between;
   position: relative;
+  outline: aqua 2px solid;
 }
 .overview__titel {
   font-size: 55px;
@@ -71,11 +72,11 @@
   font-weight: 700;
   margin: 0;
   padding: 0;
-  grid-column: 1/2;
-  margin-top: 80px;
-  letter-spacing: -0.5px;
-  white-space: pre-line;
   width: 460px;
+  margin: 60px 0 50px;
+  color: #151515;
+  grid-column: 1/2;
+  letter-spacing: -0.5px;
 }
 .overview__text {
   font-size: 18px;
@@ -83,16 +84,16 @@
   font-weight: 400;
   margin: 0;
   padding: 0;
-  grid-column: 1/2;
   max-width: 460px;
-  margin: 0;
+  margin: 0 0 50px;
+  color: #222;
+  grid-column: 1/2;
   opacity: 0.7;
 }
 .overview__place {
+  width: 100%;
   grid-column: 3/4;
   grid-row: 1/6;
-  padding-top: 20px;
-  width: 100%;
 }
 .overview__button {
   font-size: 14px;
@@ -100,13 +101,13 @@
   font-weight: 600;
   margin: 0;
   padding: 0;
+  margin-bottom: 167px;
   width: 180px;
   height: 50px;
-  margin-bottom: 167px;
-  grid-column: 1/2;
-  letter-spacing: 1px;
   color: white;
   background-color: #24b47e;
+  grid-column: 1/2;
+  letter-spacing: 1px;
   border: 0;
   border-radius: 4px;
   transition: 800ms ease;
@@ -131,16 +132,22 @@
   outline: dodgerblue 3px solid;
 }
 .overview__bike {
-  grid-column: 2/4;
-  grid-row: 3/6;
-  position: -webkit-sticky;
-  position: sticky;
+  padding: 20px 50px;
+  background: #f4f4f4;
+  box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 20px;
-  padding: 20px 50px;
-  background: #F4F4F4;
-  box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.44);
+  position: -webkit-sticky;
+  position: sticky;
+}
+.overview__sticky-container {
+  padding: 372px 0 79px 0;
+  right: 50px;
+  grid-column: 2;
+  grid-row: 1/6;
+  box-sizing: border-box;
+  position: relative;
 }
 .overview__name {
   grid-column: 1/2;
@@ -160,4 +167,9 @@
   left: 224px;
   top: 9px;
   background: #d7d4d4;
+}
+
+.place {
+  padding: 120px 0 60px 120px;
+  outline: 2px solid seagreen;
 }
