@@ -1,6 +1,6 @@
 .overview {
    padding-top: 20px;
-   padding-left: 120/1440*100%;
+   padding-left: 120/1440 * 100%;
    background-color: #f4f4f4;
    display: grid;
    grid-template-columns: minmax(200px, 410px) 10px minmax(200px, 610px); //2 колонкой отрегулировать лесопед.
@@ -8,7 +8,7 @@
    position: relative;
    outline: aqua 2px solid;
 
-   &__titel {
+   &__title {
       @include text(55px, 60px, 700);
       width: 460px;
       margin: 60px 0 50px;
