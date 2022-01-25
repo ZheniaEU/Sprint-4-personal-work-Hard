@@ -248,6 +248,26 @@
   display: flex;
   margin-bottom: 50px;
 }
+.road__picture-description {
+  position: relative;
+}
+.road__picture-description:before {
+  width: 98px;
+  height: 40px;
+  content: "";
+  background-image: url(../../images/road-back-gneen.svg);
+  position: absolute;
+  top: 344px;
+}
+.road__picture-description:after {
+  width: 50px;
+  height: 16px;
+  content: "";
+  background-image: url(../../images/road1.svg);
+  position: absolute;
+  top: 356px;
+  left: 16px;
+}
 .road__image {
   margin-right: 40px;
 }

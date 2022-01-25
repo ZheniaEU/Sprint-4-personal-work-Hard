@@ -3,7 +3,6 @@
    padding-left: 120/1440 * 100%;
    outline: blanchedalmond 2px solid;
 
-
    &__title {
       @include text(55px, 60px, 700);
       margin-bottom: 50px;
@@ -19,13 +18,36 @@
       opacity: 70%;
    }
 
-   &__image-container{
+   &__image-container {
       display: flex;
       margin-bottom: 50px;
-
    }
 
-   &__image{
+   &__picture-description {
+      position: relative;
+
+
+      &:before {
+         width: 98px; //2пикселя обрубил
+         height: 40px;
+         content: "";
+         background-image: url(../../images/road-back-gneen.svg);
+         position: absolute;
+         top: 344px;
+      }
+
+      &:after {
+         width: 50px;
+         height: 16px;
+         content: "";
+         background-image: url(../../images/road1.svg);
+         position: absolute;
+         top: 356px;
+         left: 16px;
+      }
+   }
+
+   &__image {
       margin-right: 40px;
    }
 
@@ -103,7 +125,6 @@
       &:focus {
          outline: 2px solid dodgerblue;
       }
-
    }
    &__button_type_left {
       margin-right: 20px;
