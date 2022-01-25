@@ -1,6 +1,6 @@
 .overview {
    padding-top: 20px;
-   padding-left: 120px;
+   padding-left: 120/1440*100%;
    background-color: #f4f4f4;
    display: grid;
    grid-template-columns: minmax(200px, 410px) 10px minmax(200px, 610px); //2 колонкой отрегулировать лесопед.
