@@ -1,0 +1,65 @@
+.bike {
+   padding: 60px 0 60px;
+   padding-left: 120/1440 * 100%;
+   outline: darkcyan 2px solid;
+
+   &__description {
+      margin-bottom: 120px;
+      padding-right: 20px; //чтоб к краю не прилипал
+      max-width: 1200px;
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &__title {
+      @include text(55px, 60px, 700);
+      letter-spacing: -0.5px;
+      color: #151515;
+   }
+
+
+   //можно гридами, но я уже в этом макете гридов пожевал, в секции overview
+   &__list-type {
+      display: flex;
+      align-items: flex-end;
+   }
+
+   &__description-type {
+      @include text(18px, 28px, 600);
+      margin-right: 40px;
+      color: #222;
+      list-style: none;
+      opacity: 70%;
+
+      &:last-child {
+         margin: 0;
+      }
+   }
+
+   &__description-type-active {
+      color: #151515;
+      opacity: 1;
+   }
+
+   &__list-type {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+   }
+
+   &__image {
+      margin-right: 30px;
+
+      &:last-child {
+         margin-right: 0;
+      }
+   }
+
+   &__t{
+      margin-bottom: 22px
+   }
+
+   &__name {
+      @include text(18px, 22px, 700);
+   }
+}

@@ -311,3 +311,68 @@
   left: 18px;
   transform: rotate(135deg);
 }
+
+.bike {
+  padding: 60px 0 60px;
+  padding-left: 8.3333333333%;
+  outline: darkcyan 2px solid;
+}
+.bike__description {
+  margin-bottom: 120px;
+  padding-right: 20px;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+}
+.bike__title {
+  font-size: 55px;
+  line-height: 60px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  letter-spacing: -0.5px;
+  color: #151515;
+}
+.bike__list-type {
+  display: flex;
+  align-items: flex-end;
+}
+.bike__description-type {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  margin-right: 40px;
+  color: #222;
+  list-style: none;
+  opacity: 70%;
+}
+.bike__description-type:last-child {
+  margin: 0;
+}
+.bike__description-type-active {
+  color: #151515;
+  opacity: 1;
+}
+.bike__list-type {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.bike__image {
+  margin-right: 30px;
+}
+.bike__image:last-child {
+  margin-right: 0;
+}
+.bike__t {
+  margin-bottom: 22px;
+}
+.bike__name {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
