@@ -372,7 +372,14 @@
 .bike__name {
   font-size: 18px;
   line-height: 22px;
-  font-weight: 700;
+  font-weight: 600;
   margin: 0;
   padding: 0;
+  color: #151515;
+}
+
+.training {
+  padding: 150px 0 120px;
+  padding-left: 8.3333333333%;
+  outline: darkcyan 2px solid;
 }
