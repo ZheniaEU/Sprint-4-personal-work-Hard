@@ -1,0 +1,48 @@
+.footer {
+   padding: 80px 0 60px;
+   padding-left: 120/1440 * 100%;
+   background-color: #efefef;
+
+   &__titel {
+      @include text(24px, 32px, 700);
+      width: 229px;
+
+      margin-bottom: 50px;
+      color: #151515;
+   }
+
+   &__email {
+      width: 360px;
+      height: 50px;
+      margin-bottom: 100px;
+      padding: 0;
+      border: none;
+      outline: 1px solid rgba(199, 199, 199, 0.5);
+   }
+
+   //тут моё воображение воруют кроты, хочется назвать див по русски
+   &__info {
+      display: flex;
+      justify-content: space-between;
+      margin-right: 120px;
+   }
+
+   &__toggler{
+      align-self: flex-end;
+   }
+
+   &__switch-light{
+      margin-right: 22px;
+   }
+
+   &__switch-dark{
+      margin-left: 22px;
+      margin-bottom: 4px;
+   }
+
+   //что писать руками? я уверен что я много раз видел такой чекбокс
+   &____checkbox{
+margin: 0;
+   }
+}
+

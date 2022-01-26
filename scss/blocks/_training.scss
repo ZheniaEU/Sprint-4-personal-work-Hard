@@ -7,6 +7,7 @@
    grid-template-columns: minmax(180px, 460px) minmax(180px, 1fr);
    column-gap: 160/1320 * 100%;
    grid-template-rows: repeat(2, auto) 1fr;
+   background-color: #f4f4f4;
    outline: darkcyan 2px solid;
    // а в грид ариа нельзя элементы друг на друга накладывать грид колум и грид роу даются особенно тяжко:(
 

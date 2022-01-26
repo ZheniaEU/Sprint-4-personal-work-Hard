@@ -4,7 +4,6 @@
   max-width: 1440px;
   min-width: 300px;
   margin: 0 auto;
-  background-color: white;
   font-family: "Inter", Tahoma, sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -173,6 +172,7 @@
   padding: 120px 0 60px;
   padding-left: 8.3333333333%;
   display: flex;
+  background-color: #f4f4f4;
   outline: 2px solid seagreen;
 }
 .place__image {
@@ -221,6 +221,7 @@
 .road {
   padding: 60px 0 60px;
   padding-left: 8.3333333333%;
+  background-color: #f4f4f4;
   outline: blanchedalmond 2px solid;
 }
 .road__title {
@@ -315,6 +316,7 @@
 .bike {
   padding: 60px 0 60px;
   padding-left: 8.3333333333%;
+  background-color: #f4f4f4;
   outline: darkcyan 2px solid;
 }
 .bike__description {
@@ -386,6 +388,7 @@
   -moz-column-gap: 12.1212121212%;
        column-gap: 12.1212121212%;
   grid-template-rows: repeat(2, auto) 1fr;
+  background-color: #f4f4f4;
   outline: darkcyan 2px solid;
 }
 .training__titel {
@@ -434,4 +437,46 @@
   margin-left: auto;
   grid-column: 2;
   grid-row: 1/4;
+}
+
+.footer {
+  padding: 80px 0 60px;
+  padding-left: 8.3333333333%;
+  background-color: #efefef;
+}
+.footer__titel {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  width: 229px;
+  margin-bottom: 50px;
+  color: #151515;
+}
+.footer__email {
+  width: 360px;
+  height: 50px;
+  margin-bottom: 100px;
+  padding: 0;
+  border: none;
+  outline: 1px solid rgba(199, 199, 199, 0.5);
+}
+.footer__info {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 120px;
+}
+.footer__toggler {
+  align-self: flex-end;
+}
+.footer__switch-light {
+  margin-right: 22px;
+}
+.footer__switch-dark {
+  margin-left: 22px;
+  margin-bottom: 4px;
+}
+.footer____checkbox {
+  margin: 0;
 }
