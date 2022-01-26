@@ -1,8 +1,54 @@
 .training {
+   //ладно ладно гриды, стоить уж доконца раскусить их, ну чтоб хапнуть кротовых нор побольше с адаптацие сразу и гридов и флексбокса и сравнить.
+   //плюс виден сразу обёрток меньше, минус в том что файловую структуру я сделал для флекс бокса и там был дополнительный див 20 минут тупил не понимал почему картинка во вторую колонку не идёт-,-
    padding: 150px 0 120px;
    padding-left: 120/1440 * 100%;
+   display: grid;
+   grid-template-columns: minmax(180px, 460px) minmax(180px, 1fr);
+   column-gap: 160/1320 * 100%;
+   grid-template-rows: repeat(2, auto) 1fr;
    outline: darkcyan 2px solid;
+   // а в грид ариа нельзя элементы друг на друга накладывать грид колум и грид роу даются особенно тяжко:(
 
+   &__titel {
+      @include text(55px, 60px, 700);
+      letter-spacing: -0.5px;
+      margin-bottom: 50px;
+      color: #151515;
+   }
 
+   &__description {
+      @include text(18px, 28px, 400);
+      margin-bottom: 182px;
+      color: #222;
+      opacity: 70%;
+   }
 
+   &__list {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+   }
+
+   &__list-item {
+      margin-right: 30px;
+
+      &:last-child {
+         margin-right: 0;
+      }
+   }
+
+   &__link {
+      @include text(18px, 28px, 600);
+      color: #222;
+      text-decoration: none;
+   }
+
+   &__place {
+      width: 100%;
+      margin-left: auto;
+      grid-column: 2;
+      grid-row: 1/4;
+   }
 }
