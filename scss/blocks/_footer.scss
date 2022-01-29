@@ -27,22 +27,59 @@
       margin-right: 120px;
    }
 
-   &__toggler{
+   &__toggler {
       align-self: flex-end;
    }
 
-   &__switch-light{
-      margin-right: 22px;
+   &__switch-light {
+      width: 28px;
+      height: 28px;
+      margin-right: 17px;
    }
 
-   &__switch-dark{
-      margin-left: 22px;
+   &__switch-dark {
+      width: 20px;
+      height: 20px;
+      margin-left: 18px;
       margin-bottom: 4px;
    }
 
    //что писать руками? я уверен что я много раз видел такой чекбокс
-   &____checkbox{
-margin: 0;
+   //к этому чекбоксу не мог приступить 3 дня так боялся его:*(
+   //уф в пиксель пёрфект сверстал вместе с отступами картинок, они чутка отличаются от макетных, но зато выглядят как на макете!
+
+
+   &__checkbox {
+      width: 44px;
+      height: 24px;
+      margin-bottom: 2px;
+      background: white;
+      border-radius: 9999px;
+      transition: 0.5s;
+      position: relative;
+      appearance: none;
+      -moz-appearance: none;
+
+
+
+      &:before {
+         content: "";
+         width: 20px;
+         height: 20px;
+         background: #24B47E;
+         border-radius: 9999px;
+         transition: 0.5s;
+         position: absolute;
+         top: 2px;
+         left: 2px;
+      }
+
+      &:checked {
+         background: #545454;
+      }
+
+      &:checked:before {
+         left: 22px;
+      }
    }
 }
-
