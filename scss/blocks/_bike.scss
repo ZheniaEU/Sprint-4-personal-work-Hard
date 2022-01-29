@@ -44,11 +44,20 @@
 
    &__list-type {
       margin: 0;
-      padding: 0;
+
       list-style: none;
    }
 
-   &__image {
+   &__link{
+   
+      visibility: hidden;
+      // margin-bottom: 22px;
+   }
+
+   &__list {
+      // width: 380px;
+      // height: 380px;
+      background-color: #C4C4C4;
       margin-right: 30px;
 
       &:last-child {
@@ -56,8 +65,13 @@
       }
    }
 
-   &__t{
-      margin-bottom: 22px
+   &__image{
+      visibility: visible;
+      width: 100%;
+      margin: 20px;
+      object-fit: contain;
+      margin-bottom: 22px;
+      align-items: center
    }
 
    &__name {

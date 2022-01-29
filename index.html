@@ -9,8 +9,6 @@
    <meta name="keywords" content="Яндекс, oбучение, frontend">
    <meta name="author" content="Evgeny Kuznetsov">
    <link rel="stylesheet" href="pages/index.css">
-   <link rel="stylesheet" href="css/light.css" media="(prefers-color-scheme: light)">
-   <link rel="stylesheet" href="css/dark.css" media="(prefers-color-scheme: dark)">
    <link rel="icon" type="image/ico" href="images/favicon/favicon.ico">
    <title>Вело проект</title>
 </head>
@@ -77,16 +75,23 @@
          </div>
          <div>
             <ul class="bike__list-type">
-               <li class="bike__image">
-                  <img class="bike__t" src="./images/Cervelo-Caledonia-5.png" alt="Cervelo Caledonia-5">
+               <li class="bike__list">
+                  <a class="bike__link" href="https://www.sigmasports.com/item/Cervelo/Caledonia-5-Ultegra-Disc-Road-Bike-2021/RDEN" target="_blanck">
+                     <img class="bike__image" src="./images/Cervelo-Caledonia-5.png" alt="Cervelo Caledonia-5">
+                  </a>
                   <p class="bike__name">Cervelo Caledonia-5</p>
                </li>
-               <li class="bike__image">
-                  <img class="bike__t" src="./images/Cannondale-Systemsix-Himod.png" alt="Cannondale Systemsix Himod">
+               <li class="bike__list">
+                  <a class="bike__link" href="">
+                     <img class="bike__image" src="./images/Cannondale-Systemsix-Himod.png"
+                        alt="Cannondale Systemsix Himod">
+                  </a>
                   <p class="bike__name">Cannondale Systemsix Himod</p>
                </li>
-               <li class="bike__image">
-                  <img class="bike__t" src="./images/Trek-Domane-SL-7.png" alt="Trek Domane SL-7">
+               <li class="bike__list">
+                  <a class="bike__link" href="">
+                     <img class="bike__image" src="./images/Trek-Domane-SL-7.png" alt="Trek Domane SL-7">
+                  </a>
                   <p class="bike__name">Trek Domane SL-7</p>
                </li>
             </ul>
@@ -113,7 +118,7 @@
       <footer class="footer">
          <h2 class="footer__titel">Подпишитесь на рассылку &mdash;</h2>
          <form class="footer__form">
-            <input class="footer__email" type="text">
+            <input class="footer__email" type="text" placeholder="Ваш e-mail">
             <button class="footer__button-submit" type="submit">ok</button>
          </form>
          <div class="footer__info">

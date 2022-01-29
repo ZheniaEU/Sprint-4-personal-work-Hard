@@ -359,17 +359,26 @@
 }
 .bike__list-type {
   margin: 0;
-  padding: 0;
   list-style: none;
 }
-.bike__image {
+.bike__link {
+  visibility: hidden;
+}
+.bike__list {
+  background-color: #C4C4C4;
   margin-right: 30px;
 }
-.bike__image:last-child {
+.bike__list:last-child {
   margin-right: 0;
 }
-.bike__t {
+.bike__image {
+  visibility: visible;
+  width: 100%;
+  margin: 20px;
+  -o-object-fit: contain;
+     object-fit: contain;
   margin-bottom: 22px;
+  align-items: center;
 }
 .bike__name {
   font-size: 18px;
@@ -454,13 +463,72 @@
   margin-bottom: 50px;
   color: #151515;
 }
-.footer__email {
+.footer__form {
+  position: relative;
   width: 360px;
-  height: 50px;
-  margin-bottom: 100px;
-  padding: 0;
-  border: none;
   outline: 1px solid rgba(199, 199, 199, 0.5);
+  margin-bottom: 100px;
+}
+.footer__email {
+  height: 50px;
+  width: 300px;
+  margin-left: 20px;
+  padding: 0;
+  background-color: #efefef;
+  outline: none;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  opacity: 70%;
+}
+.footer__email::-moz-placeholder {
+  font-size: 13px;
+  line-height: 28px;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+.footer__email:-ms-input-placeholder {
+  font-size: 13px;
+  line-height: 28px;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+.footer__email::placeholder {
+  font-size: 13px;
+  line-height: 28px;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+.footer__email:hover {
+  opacity: 1;
+  border: none;
+}
+.footer__button-submit {
+  font-size: 13px;
+  line-height: 28px;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  width: 18px;
+  height: 28px;
+  margin: 0;
+  padding: 0;
+  color: #151515;
+  visibility: hidden;
+  cursor: pointer;
+  border: none;
+  position: absolute;
+  right: 22px;
+  top: 11px;
+}
+.footer__button-submit_active {
+  visibility: visible;
 }
 .footer__info {
   display: flex;
@@ -497,7 +565,7 @@
   content: "";
   width: 20px;
   height: 20px;
-  background: #24B47E;
+  background: #24b47e;
   border-radius: 9999px;
   transition: 0.5s;
   position: absolute;

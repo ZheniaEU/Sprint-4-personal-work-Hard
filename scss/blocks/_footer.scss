@@ -11,13 +11,63 @@
       color: #151515;
    }
 
-   &__email {
+   &__form {
+      position: relative;
       width: 360px;
-      height: 50px;
-      margin-bottom: 100px;
-      padding: 0;
-      border: none;
+
       outline: 1px solid rgba(199, 199, 199, 0.5);
+      margin-bottom: 100px;
+   }
+
+   &__email {
+      height: 50px;
+      width: 300px;
+      margin-left: 20px;
+      padding: 0;
+
+      background-color: #efefef;
+      outline: none;
+      border: none;
+      border-radius: 0;
+      cursor: pointer;
+      opacity: 70%;
+
+
+      &::placeholder {
+         @include text(13px, 28px, 500);
+
+         color: #222;
+         
+      }
+
+
+
+
+      &:hover{
+         opacity: 1;
+         border: none;
+      }
+      
+   }
+
+   &__button-submit {
+      @include text(13px, 28px, 500);
+      width: 18px;
+      height: 28px;
+      margin: 0;
+      padding: 0;
+      color: #151515;
+      visibility: hidden;
+      cursor: pointer;
+      border: none;
+      position: absolute;
+      right: 22px;
+      top: 11px;
+   }
+
+   // показывает кнопку 111
+   &__button-submit_active{
+      visibility: visible;
    }
 
    //тут моё воображение воруют кроты, хочется назвать див по русски
@@ -48,7 +98,6 @@
    //к этому чекбоксу не мог приступить 3 дня так боялся его:*(
    //уф в пиксель пёрфект сверстал вместе с отступами картинок, они чутка отличаются от макетных, но зато выглядят как на макете!
 
-
    &__checkbox {
       width: 44px;
       height: 24px;
@@ -60,13 +109,11 @@
       appearance: none;
       -moz-appearance: none;
 
-
-
       &:before {
          content: "";
          width: 20px;
          height: 20px;
-         background: #24B47E;
+         background: #24b47e;
          border-radius: 9999px;
          transition: 0.5s;
          position: absolute;
