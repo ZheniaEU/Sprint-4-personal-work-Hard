@@ -28,7 +28,6 @@
    &__description-type {
       @include text(18px, 28px, 600);
       margin-right: 40px;
-      color: #222;
       list-style: none;
       opacity: 70%;
 
@@ -37,9 +36,18 @@
       }
    }
 
-   &__description-type-active {
+   &__description-type_active {
       color: #151515;
       opacity: 1;
+   }
+
+   &__links-name {
+      color: #222;
+      text-decoration: none;
+
+      &:focus{
+         outline: 3px solid dodgerblue;
+      }
    }
 
    //переписыва заного -,-!😁
@@ -58,7 +66,7 @@
       padding: 0;
       margin-right: 30px;
 
-      &:last-child{
+      &:last-child {
          margin-right: 0;
       }
    }
@@ -75,6 +83,10 @@
 
    &__link {
       cursor: pointer;
+
+      &:focus {
+         outline: 3px solid dodgerblue;
+      }
    }
 
    &__name {

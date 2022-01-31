@@ -39,6 +39,9 @@
 .header__links:last-child {
   margin-right: 120px;
 }
+.header__links:focus {
+  outline: 3px solid dodgerblue;
+}
 .header__burger {
   cursor: pointer;
   visibility: hidden;
@@ -126,9 +129,6 @@
   cursor: pointer;
   transform-origin: top;
   transform: rotateX(90deg);
-}
-.overview__button:focus {
-  outline: dodgerblue 3px solid;
 }
 .overview__bike {
   padding: 20px 50px;
@@ -299,7 +299,7 @@
   transform: scale(0.9);
 }
 .road__button_type_left:focus, .road__button_type_right:focus {
-  outline: 2px solid dodgerblue;
+  outline: none;
 }
 .road__button_type_left {
   margin-right: 20px;
@@ -346,16 +346,22 @@
   margin: 0;
   padding: 0;
   margin-right: 40px;
-  color: #222;
   list-style: none;
   opacity: 70%;
 }
 .bike__description-type:last-child {
   margin: 0;
 }
-.bike__description-type-active {
+.bike__description-type_active {
   color: #151515;
   opacity: 1;
+}
+.bike__links-name {
+  color: #222;
+  text-decoration: none;
+}
+.bike__links-name:focus {
+  outline: 3px solid dodgerblue;
 }
 .bike__cards {
   display: flex;
@@ -383,6 +389,9 @@
 }
 .bike__link {
   cursor: pointer;
+}
+.bike__link:focus {
+  outline: 3px solid dodgerblue;
 }
 .bike__name {
   font-size: 18px;
@@ -447,6 +456,9 @@
   color: #222;
   text-decoration: none;
 }
+.training__link:focus {
+  outline: 3px solid dodgerblue;
+}
 .training__place {
   width: 100%;
   margin-left: auto;
@@ -476,6 +488,11 @@
   margin-bottom: 100px;
 }
 .footer__email {
+  font-size: 13px;
+  line-height: 28px;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
   height: 50px;
   width: 300px;
   margin-left: 20px;
@@ -485,7 +502,6 @@
   border: none;
   border-radius: 0;
   cursor: pointer;
-  opacity: 70%;
 }
 .footer__email::-moz-placeholder {
   font-size: 13px;
@@ -493,6 +509,7 @@
   font-weight: 500;
   margin: 0;
   padding: 0;
+  opacity: 70%;
   color: #222;
 }
 .footer__email:-ms-input-placeholder {
@@ -501,6 +518,7 @@
   font-weight: 500;
   margin: 0;
   padding: 0;
+  opacity: 70%;
   color: #222;
 }
 .footer__email::placeholder {
@@ -509,9 +527,18 @@
   font-weight: 500;
   margin: 0;
   padding: 0;
+  opacity: 70%;
   color: #222;
 }
-.footer__email:hover {
+.footer__email:hover::-moz-placeholder {
+  opacity: 1;
+  border: none;
+}
+.footer__email:hover:-ms-input-placeholder {
+  opacity: 1;
+  border: none;
+}
+.footer__email:hover::placeholder {
   opacity: 1;
   border: none;
 }
@@ -566,6 +593,9 @@
   -webkit-appearance: none;
           appearance: none;
   -moz-appearance: none;
+}
+.footer__checkbox:focus {
+  outline: none;
 }
 .footer__checkbox:before {
   content: "";

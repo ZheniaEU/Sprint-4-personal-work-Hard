@@ -20,36 +20,31 @@
    }
 
    &__email {
+      @include text(13px, 28px, 500);
       height: 50px;
       width: 300px;
       margin-left: 20px;
       padding: 0;
-
       background-color: #efefef;
       outline: none;
       border: none;
       border-radius: 0;
       cursor: pointer;
-      opacity: 70%;
-
 
       &::placeholder {
          @include text(13px, 28px, 500);
-
+         opacity: 70%;
          color: #222;
-         
       }
 
-
-
-
-      &:hover{
+      &:hover::placeholder {
          opacity: 1;
          border: none;
       }
-      
+
    }
 
+   //тут есть кнопка но её не видно без джава скрипта :)
    &__button-submit {
       @include text(13px, 28px, 500);
       width: 18px;
@@ -66,7 +61,7 @@
    }
 
    // показывает кнопку 111
-   &__button-submit_active{
+   &__button-submit_active {
       visibility: visible;
    }
 
@@ -108,6 +103,10 @@
       position: relative;
       appearance: none;
       -moz-appearance: none;
+
+      &:focus {
+         outline: none;
+      }
 
       &:before {
          content: "";
