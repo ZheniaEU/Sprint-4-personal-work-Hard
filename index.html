@@ -16,12 +16,25 @@
 <body class="root">
 
    <header class="header">
-      <button class="header__burger" type="button">кнопка</button>
+      <div class="header__burger popup">
+         <input class="header__burger-box popup__burger" type="checkbox" />
+         <span id="span1"></span>
+         <span id="span2"></span>
+         <span id="span3"></span>
+      </div>
+      <!-- <button class="header__burger" type="button">к</button> -->
       <nav class="header__nav">
          <a class="header__links" href="#">Покрытия и градиенты</a>
          <a class="header__links" href="#">Велосипеды</a>
          <a class="header__links" href="#">Тренировки</a>
       </nav>
+
+      <!-- <div class="header__burger" id="menuToggle">
+         <input type="checkbox" />
+         <span id="span1"></span>
+         <span id="span2"></span>
+         <span id="span3"></span>
+     </div> -->
    </header>
    <main class="content">
 
@@ -128,7 +141,7 @@
       </section>
 
       <footer class="footer">
-         <!-- тут уже жалуются что по рукам лупят за h2 в футере, срочно! срочно поменять на h следующего уровня -->
+         <!-- тут уже жалуются что по рукам лупят за h2 в футере, срочно! срочно! поменять на h следующего уровня -->
          <h3 class="footer__titel">Подпишитесь на рассылку &mdash;</h3>
          <form class="footer__form">
             <input class="footer__email" type="text" placeholder="Ваш e-mail">

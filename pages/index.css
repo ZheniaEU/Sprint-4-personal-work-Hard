@@ -14,14 +14,29 @@
 }
 
 .header {
+  display: flex;
+  justify-content: flex-end;
   min-height: 74px;
   background-color: #f4f4f4;
   outline: purple 2px solid;
   max-width: 100%;
 }
+@media screen and (max-width: 1200px) {
+  .header {
+    flex-direction: column;
+    justify-content: start;
+    min-height: 566px;
+  }
+}
 .header__nav {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 1200px) {
+  .header__nav {
+    flex-direction: column;
+  }
 }
 .header__links {
   font-size: 14px;
@@ -42,20 +57,13 @@
 .header__links:focus {
   outline: 3px solid dodgerblue;
 }
-.header__burger {
-  cursor: pointer;
-  visibility: hidden;
-}
-@media screen and (max-width: 600px) {
-  .header__burger {
-    visibility: visible;
+@media screen and (max-width: 1200px) {
+  .header__links {
+    margin-right: 10px;
   }
-}
-.header__burger:hover {
-  opacity: 60%;
-}
-.header__burger:focus {
-  outline: 3px solid dodgerblue;
+  .header__links:last-child {
+    margin-right: 10px;
+  }
 }
 
 .overview {
@@ -613,4 +621,67 @@
 }
 .footer__checkbox:checked:before {
   left: 22px;
+}
+
+.popup {
+  overflow: hidden;
+  margin: 20px 20px 0 auto;
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+  cursor: pointer;
+}
+@media screen and (max-width: 1200px) {
+  .popup {
+    visibility: visible;
+  }
+}
+.popup__burger {
+  display: flex;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  /* hide input */
+  z-index: 1;
+  /* top of the menu */
+}
+.popup__burger:checked ~ #span1 {
+  background-color: #151515;
+  transform: rotate(45deg) translate(8.5px);
+}
+.popup__burger:checked ~ #span2 {
+  background-color: #151515;
+  transform: rotate(495deg) translate(2px);
+}
+.popup__burger:checked ~ #span3 {
+  background-color: #151515;
+  transform: rotate(45deg);
+  opacity: 0;
+}
+
+.popup span {
+  margin-left: 2px;
+  margin-bottom: 5px;
+  width: 22px;
+  height: 3px;
+  margin-bottom: 5px;
+  background: #151515;
+  border: 3px;
+  transition: all 0.5s cubic-bezier(0.08, 0.81, 0.87, 0.71);
+  -moz-transition: all 0.5s cubic-bezier(0.08, 0.81, 0.87, 0.71);
+  -ms-transition: all 0.5s cubic-bezier(0.08, 0.81, 0.87, 0.71);
+  -o-transition: all 0.5s cubic-bezier(0.08, 0.81, 0.87, 0.71);
+}
+
+#span1 {
+  transform-origin: 3px -6px;
+}
+
+#span3 {
+  transform-origin: bottom left;
 }
