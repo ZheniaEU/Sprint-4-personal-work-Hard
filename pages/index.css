@@ -21,7 +21,7 @@
   outline: purple 2px solid;
   max-width: 100%;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 600px) {
   .header {
     flex-direction: column;
     justify-content: start;
@@ -33,7 +33,7 @@
   justify-content: center;
   align-items: center;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 600px) {
   .header__nav {
     flex-direction: column;
   }
@@ -57,7 +57,7 @@
 .header__links:focus {
   outline: 3px solid dodgerblue;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 600px) {
   .header__links {
     margin-right: 10px;
   }
@@ -624,16 +624,16 @@
 }
 
 .popup {
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
   margin: 20px 20px 0 auto;
   max-width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
+  overflow: hidden;
   visibility: hidden;
   cursor: pointer;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 600px) {
   .popup {
     visibility: visible;
   }
@@ -646,25 +646,22 @@
   position: absolute;
   cursor: pointer;
   opacity: 0;
-  /* hide input */
   z-index: 1;
-  /* top of the menu */
 }
-.popup__burger:checked ~ #span1 {
+.popup__burger:checked ~ .popup__burger_element_top {
   background-color: #151515;
   transform: rotate(45deg) translate(8.5px);
 }
-.popup__burger:checked ~ #span2 {
+.popup__burger:checked ~ .popup__burger_element_middle {
   background-color: #151515;
   transform: rotate(495deg) translate(2px);
 }
-.popup__burger:checked ~ #span3 {
+.popup__burger:checked ~ .popup__burger_element_bottom {
   background-color: #151515;
   transform: rotate(45deg);
   opacity: 0;
 }
-
-.popup span {
+.popup__burger-element {
   margin-left: 2px;
   margin-bottom: 5px;
   width: 22px;
@@ -673,15 +670,14 @@
   background: #151515;
   border: 3px;
   transition: all 0.5s cubic-bezier(0.08, 0.81, 0.87, 0.71);
+  -webkit-transition: all 0.5s cubic-bezier(0.08, 0.81, 0.87, 0.71);
   -moz-transition: all 0.5s cubic-bezier(0.08, 0.81, 0.87, 0.71);
   -ms-transition: all 0.5s cubic-bezier(0.08, 0.81, 0.87, 0.71);
   -o-transition: all 0.5s cubic-bezier(0.08, 0.81, 0.87, 0.71);
 }
-
-#span1 {
+.popup__burger_element_top {
   transform-origin: 3px -6px;
 }
-
-#span3 {
+.popup__burger_element_bottom {
   transform-origin: bottom left;
 }

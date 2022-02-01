@@ -6,7 +6,7 @@
    outline: purple 2px solid;
    max-width: 100%;
 
-   @media screen and (max-width: 1200px) {
+   @media screen and (max-width: 600px) {
       flex-direction: column;
       justify-content: start;
       min-height: 566px;
@@ -17,7 +17,7 @@
       justify-content: center;
       align-items: center;
 
-      @media screen and (max-width: 1200px) {
+      @media screen and (max-width: 600px) {
          flex-direction: column;
       }
    }
@@ -40,7 +40,7 @@
          outline: 3px solid dodgerblue;
       }
 
-      @media screen and (max-width: 1200px) {
+      @media screen and (max-width: 600px) {
          margin-right: 10px;
 
          &:last-child {
