@@ -1,20 +1,40 @@
+// унылость необыкновенная
 .popup {
    display: flex;
-   flex-direction: column;
-   margin: 20px 20px 0 auto;
-   max-width: 100%;
-   height: 100%;
-   overflow: hidden;
-   visibility: hidden;
-   cursor: pointer;
+   // min-height: 74px;
+   background-color: #f4f4f4;
+   outline: purple 2px solid;
 
-   @media screen and (max-width: 600px) {
+   // height: 500px;
+   height: 100%;
+   flex-direction: column;
+   justify-content: space-between;
+   position: fixed;
+   z-index: 3;
+   padding: 0 ;
+   max-width: 100%;
+
+   &_opened {
       visibility: visible;
    }
 
+   &__page {
+      display: flex;
+      flex-direction: column;
+      margin: 20px 20px 0 auto;
+      max-width: 100%;
 
-//о этот бургер на 5 часов, не хочу не хочу доделывать его:(
+      overflow: hidden;
+      visibility: visible;
+      cursor: pointer;
+
+      // @media screen and (max-width: 600px) {
+      //    visibility: visible;
+      // }
+   }
+   //о этот бургер на 5 часов, нехочу не хочу доделывать его:(
    &__burger {
+      margin-left: auto;
       display: flex;
       justify-content: center;
       width: 25px;
@@ -63,5 +83,16 @@
    &__burger_element_bottom {
       transform-origin: bottom left;
    }
-}
 
+   &__nav {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin: 0 auto;
+   }
+   &__links{
+      display: inline-block;
+   }
+}

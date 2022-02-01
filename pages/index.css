@@ -19,24 +19,12 @@
   min-height: 74px;
   background-color: #f4f4f4;
   outline: purple 2px solid;
-  max-width: 100%;
-}
-@media screen and (max-width: 600px) {
-  .header {
-    flex-direction: column;
-    justify-content: start;
-    min-height: 566px;
-  }
+  position: relative;
 }
 .header__nav {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-@media screen and (max-width: 600px) {
-  .header__nav {
-    flex-direction: column;
-  }
 }
 .header__links {
   font-size: 14px;
@@ -56,14 +44,6 @@
 }
 .header__links:focus {
   outline: 3px solid dodgerblue;
-}
-@media screen and (max-width: 600px) {
-  .header__links {
-    margin-right: 10px;
-  }
-  .header__links:last-child {
-    margin-right: 10px;
-  }
 }
 
 .overview {
@@ -625,20 +605,30 @@
 
 .popup {
   display: flex;
+  background-color: #f4f4f4;
+  outline: purple 2px solid;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 3;
+  padding: 0;
+  max-width: 100%;
+}
+.popup_opened {
+  visibility: visible;
+}
+.popup__page {
+  display: flex;
   flex-direction: column;
   margin: 20px 20px 0 auto;
   max-width: 100%;
-  height: 100%;
   overflow: hidden;
-  visibility: hidden;
+  visibility: visible;
   cursor: pointer;
 }
-@media screen and (max-width: 600px) {
-  .popup {
-    visibility: visible;
-  }
-}
 .popup__burger {
+  margin-left: auto;
   display: flex;
   justify-content: center;
   width: 25px;
@@ -680,4 +670,15 @@
 }
 .popup__burger_element_bottom {
   transform-origin: bottom left;
+}
+.popup__nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+.popup__links {
+  display: inline-block;
 }
