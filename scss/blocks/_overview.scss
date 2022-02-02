@@ -8,6 +8,14 @@
    position: relative;
    outline: aqua 2px solid;
 
+   @media screen and (min-width: 320px) {
+      grid-template-rows: repeat 5;
+      grid-template-columns: 100%;
+      row-gap: 40px;
+      padding: 40px 18px 80px;
+      // 80 до псевдо элемента следующий секции
+   }
+
    &__title {
       @include text(55px, 60px, 700);
       width: 460px;
@@ -15,8 +23,12 @@
       color: #151515;
       grid-column: 1/2;
       letter-spacing: -0.5px;
-   }
 
+      @media screen and (min-width: 320px) {
+         @include text(32px, 40px, 700);
+         width: 280px;
+      }
+   }
    &__text {
       @include text(18px, 28px, 400);
       max-width: 460px;
@@ -24,12 +36,24 @@
       color: #222;
       grid-column: 1/2;
       opacity: 0.7;
+
+      @media screen and (min-width: 320px) {
+         @include text(12px, 18px, 400);
+         margin-bottom: 40px;
+      }
    }
 
    &__place {
-      width: 100%;
+      max-width: 100%;
       grid-column: 3/4;
       grid-row: 1/6;
+
+      @media screen and (min-width: 320px) {
+         grid-column: 1;
+         grid-row: 2/4;
+         width: calc(100% - 30px);
+         margin-left: 30px;
+      }
    }
 
    &__button {
@@ -79,10 +103,14 @@
          transform: rotateX(90deg);
       }
 
+      @media screen and (min-width: 320px) {
+         margin-bottom: 0px;
+      }
    }
 
    //что что с этой картинкой не так? что с ней происходит? срочно нужно поймать всех кротов!
    &__bike {
+      display: block;
       padding: 20px 50px;
       background: #f4f4f4;
       // 2 значения в макете, в слаке подсказали что лучше брать 20% а не 44%
@@ -91,6 +119,15 @@
       object-fit: cover;
       // box-sizing: content-box;
       position: sticky;
+
+      @media screen and (min-width: 320px) {
+         //округлил и воткнул нормальные значения чтоб с макетом размеры сходились
+         width: 181px;
+         height: 139px;
+         object-fit: contain;
+
+         padding: 10.5px 26.5px;
+      }
    }
 
    //добавим обвёртку для нашего велосипеда, а то Печкин без обвёртки дальше не уедит, так как родитель грид и он к нему прибит гвоздями.
@@ -101,12 +138,36 @@
       grid-row: 1/6;
       box-sizing: border-box;
       position: relative;
+
+      @media screen and (min-width: 320px) {
+         display: block;
+         grid-column: 1;
+         grid-row: 2/3;
+         padding: 0;
+
+         right: 0;
+
+         grid-column: 1;
+         grid-row: 3/4;
+
+         // width: 180.82px;
+         // height: 138.67px;
+         margin-bottom: 37px;
+      }
    }
 
    &__name {
       grid-column: 1/2;
       @include text(18px, 18px, 400);
       position: relative;
+
+      //ныкаем! всё что не нужно в кротывые норы которые остались нам от кротов!
+      @media screen and (min-width: 320px) {
+         grid-column: 1;
+         grid-row: 3/4;
+         overflow: hidden;
+         visibility: hidden;
+      }
 
       &:after {
          content: "";
