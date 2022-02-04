@@ -539,12 +539,24 @@
   padding-left: 8.3333333333%;
   background-color: #f4f4f4;
 }
+@media screen and (min-width: 320px) {
+  .bike {
+    padding: 0 18px 80px;
+  }
+}
 .bike__description {
   margin-bottom: 120px;
   padding-right: 20px;
   max-width: 1200px;
   display: flex;
   justify-content: space-between;
+}
+@media screen and (min-width: 320px) {
+  .bike__description {
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding-right: 0;
+  }
 }
 .bike__title {
   font-size: 55px;
@@ -555,6 +567,13 @@
   letter-spacing: -0.5px;
   color: #151515;
 }
+@media screen and (min-width: 320px) {
+  .bike__title {
+    margin-bottom: 40px;
+    padding-top: 40px;
+    border-top: 1px solid #e3e3e3;
+  }
+}
 .bike__options {
   font-size: 11px;
   line-height: 14px;
@@ -563,13 +582,18 @@
   padding: 0;
   width: 114px;
   height: 30px;
-  padding: 8px 12px;
   padding-left: 8px;
-  background: #F4F4F4;
+  background: #f4f4f4;
   background-position: 90px;
-  border: 1px solid #E3E3E3;
+  border: 1px solid #e3e3e3;
   box-sizing: border-box;
   border-radius: 2px;
+  visibility: hidden;
+}
+@media screen and (min-width: 320px) {
+  .bike__options {
+    visibility: visible;
+  }
 }
 .bike__options-name {
   margin-left: 12px;
@@ -577,6 +601,15 @@
 .bike__list-type {
   display: flex;
   align-items: flex-end;
+}
+@media screen and (min-width: 320px) {
+  .bike__list-type {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    margin: 0;
+    overflow: hidden;
+  }
 }
 .bike__description-type {
   font-size: 18px;
