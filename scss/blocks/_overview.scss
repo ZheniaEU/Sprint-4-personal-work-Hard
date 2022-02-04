@@ -6,7 +6,7 @@
    grid-template-columns: minmax(200px, 410px) 10px minmax(200px, 610px); //2 колонкой отрегулировать лесопед.
    justify-content: space-between;
    position: relative;
-   outline: aqua 2px solid;
+   // outline: aqua 2px solid;
 
    @media screen and (min-width: 320px) {
       grid-template-rows: repeat 5;

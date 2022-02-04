@@ -3,11 +3,28 @@
    padding-left: 120/1440 * 100%;
    display: flex;
    background-color: #f4f4f4;
-   outline: 2px solid seagreen;
+   // outline: 2px solid seagreen;
+
+
+
+   @media screen and (min-width: 320px) {
+      padding: 0 18px;
+      flex-direction: column;
+      // flex-wrap: wrap;
+   }
 
    &__image {
       margin-right: 80/1320 * 100%;
+
       object-fit: contain;
+
+      @media screen and (min-width: 320px) {
+         padding-top: 20px;
+         margin-bottom: 40px;
+         margin-right: 0;
+         // max-width: calc(3 / 320 * 100%);
+         border-top: 1px solid #e3e3e3;
+      }
    }
 
    &__description-container {
@@ -15,6 +32,10 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+
+      @media screen and (min-width: 320px) {
+         margin: 0;
+      }
    }
 
    &__title {
@@ -23,6 +44,11 @@
       margin: 0;
       color: #151515;
       letter-spacing: -0.5px;
+
+      @media screen and (min-width: 320px) {
+         @include text(23px, 29px, 600);
+         margin-bottom: 40px;
+      }
    }
 
    &__name {
@@ -30,12 +56,24 @@
       margin: 0;
       font-style: normal;
       color: #151515;
-   }
 
+      @media screen and (min-width: 320px) {
+         @include text(14px, 22px, 500);
+      }
+   }
+   
    &__name-description {
       @include text(16px, 28px, 400);
       margin-top: 6px;
       color: #222;
       opacity: 0.7;
+
+      @media screen and (min-width: 320px) {
+         @include text(10px, 16px, 400);
+         margin-top: 4px;
+         padding-bottom: 80px;
+         //дизайнера покусали кроты, эту линию еле еле видно, глаза сломать можно её делать, солнце чтоб в монитор светило только не хватает.
+         border-bottom: 1px solid #e3e3e3;
+      }
    }
 }

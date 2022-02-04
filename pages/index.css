@@ -60,7 +60,6 @@
   grid-template-columns: minmax(200px, 410px) 10px minmax(200px, 610px);
   justify-content: space-between;
   position: relative;
-  outline: aqua 2px solid;
 }
 @media screen and (min-width: 320px) {
   .overview {
@@ -238,18 +237,36 @@
   padding-left: 8.3333333333%;
   display: flex;
   background-color: #f4f4f4;
-  outline: 2px solid seagreen;
+}
+@media screen and (min-width: 320px) {
+  .place {
+    padding: 0 18px;
+    flex-direction: column;
+  }
 }
 .place__image {
   margin-right: 6.0606060606%;
   -o-object-fit: contain;
      object-fit: contain;
 }
+@media screen and (min-width: 320px) {
+  .place__image {
+    padding-top: 20px;
+    margin-bottom: 40px;
+    margin-right: 0;
+    border-top: 1px solid #e3e3e3;
+  }
+}
 .place__description-container {
   margin: 0 auto 0 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+@media screen and (min-width: 320px) {
+  .place__description-container {
+    margin: 0;
+  }
 }
 .place__title {
   font-size: 34px;
@@ -262,6 +279,16 @@
   color: #151515;
   letter-spacing: -0.5px;
 }
+@media screen and (min-width: 320px) {
+  .place__title {
+    font-size: 23px;
+    line-height: 29px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 40px;
+  }
+}
 .place__name {
   font-size: 20px;
   line-height: 32px;
@@ -271,6 +298,15 @@
   margin: 0;
   font-style: normal;
   color: #151515;
+}
+@media screen and (min-width: 320px) {
+  .place__name {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+  }
 }
 .place__name-description {
   font-size: 16px;
@@ -282,12 +318,31 @@
   color: #222;
   opacity: 0.7;
 }
+@media screen and (min-width: 320px) {
+  .place__name-description {
+    font-size: 10px;
+    line-height: 16px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    margin-top: 4px;
+    padding-bottom: 80px;
+    border-bottom: 1px solid #e3e3e3;
+  }
+}
 
 .road {
   padding: 60px 0 60px;
   padding-left: 8.3333333333%;
   background-color: #f4f4f4;
-  outline: blanchedalmond 2px solid;
+  border-bottom-right-radius: 18;
+}
+@media screen and (min-width: 320px) {
+  .road {
+    padding: 40px 18px 80px 18px;
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 .road__title {
   font-size: 55px;
@@ -298,6 +353,16 @@
   margin-bottom: 50px;
   letter-spacing: -0.5px;
   color: #151515;
+}
+@media screen and (min-width: 320px) {
+  .road__title {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 40px;
+  }
 }
 .road__subtitle {
   font-size: 18px;
@@ -310,32 +375,87 @@
   color: #222;
   opacity: 70%;
 }
+@media screen and (min-width: 320px) {
+  .road__subtitle {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 0;
+    order: 4;
+  }
+}
 .road__image-container {
   display: flex;
   margin-bottom: 50px;
+}
+@media screen and (min-width: 320px) {
+  .road__image-container {
+    order: 3;
+    margin-bottom: 40px;
+  }
 }
 .road__picture-description {
   position: relative;
 }
 .road__picture-description:before {
-  width: 98px;
+  width: 100px;
   height: 40px;
   content: "";
   background-image: url(../../images/road-back-gneen.svg);
+  background-size: cover;
   position: absolute;
   top: 344px;
+}
+@media screen and (min-width: 320px) {
+  .road__picture-description:before {
+    width: 70px;
+    height: 28px;
+    background-size: cover;
+    top: 76%;
+  }
 }
 .road__picture-description:after {
   width: 50px;
   height: 16px;
   content: "";
   background-image: url(../../images/road1.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
   position: absolute;
   top: 356px;
   left: 16px;
 }
+@media screen and (min-width: 320px) {
+  .road__picture-description:after {
+    width: 35px;
+    height: 12px;
+    margin-top: 8px;
+    top: 76%;
+    left: 11px;
+  }
+}
+.road__image {
+  max-width: 100%;
+  vertical-align: bottom;
+}
 .road__pictures {
   margin-right: 40px;
+  max-width: 100%;
+}
+@media screen and (min-width: 320px) {
+  .road__pictures {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 320px) {
+  .road__pictures:last-child {
+    width: 0;
+    margin-right: 0;
+    visibility: hidden;
+    overflow: hidden;
+  }
 }
 .road__pictures:last-child {
   margin-right: 0;
@@ -343,11 +463,19 @@
 .road__button_type_left, .road__button_type_right {
   width: 50px;
   height: 50px;
+  padding: 0;
   display: inline-flex;
   background-color: #ebebeb;
   border-radius: 50%;
   position: relative;
   border: none;
+}
+@media screen and (min-width: 320px) {
+  .road__button_type_left, .road__button_type_right {
+    width: 24px;
+    height: 24px;
+    margin-top: 7px;
+  }
 }
 .road__button_type_left:hover, .road__button_type_right:hover {
   cursor: pointer;
@@ -363,6 +491,15 @@
   position: absolute;
   top: 20px;
 }
+@media screen and (min-width: 320px) {
+  .road__button_type_left:before, .road__button_type_right:before {
+    width: 5.5px;
+    height: 5.5px;
+    top: 8.5px;
+    border-top: 1.2px solid #151515;
+    border-left: 1.2px solid #151515;
+  }
+}
 .road__button_type_left:active, .road__button_type_right:active {
   transform: scale(0.9);
 }
@@ -372,13 +509,29 @@
 .road__button_type_left {
   margin-right: 20px;
 }
+@media screen and (min-width: 320px) {
+  .road__button_type_left {
+    margin-left: auto;
+    margin-right: 10px;
+  }
+}
 .road__button_type_left:before {
   left: 21px;
   transform: rotate(-45deg);
 }
+@media screen and (min-width: 320px) {
+  .road__button_type_left:before {
+    left: 10px;
+  }
+}
 .road__button_type_right:before {
   left: 18px;
   transform: rotate(135deg);
+}
+@media screen and (min-width: 320px) {
+  .road__button_type_right:before {
+    left: 8px;
+  }
 }
 
 .bike {
