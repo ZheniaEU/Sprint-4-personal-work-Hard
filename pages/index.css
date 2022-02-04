@@ -538,7 +538,6 @@
   padding: 60px 0 40px;
   padding-left: 8.3333333333%;
   background-color: #f4f4f4;
-  outline: darkcyan 2px solid;
 }
 .bike__description {
   margin-bottom: 120px;
@@ -555,6 +554,25 @@
   padding: 0;
   letter-spacing: -0.5px;
   color: #151515;
+}
+.bike__options {
+  font-size: 11px;
+  line-height: 14px;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  width: 114px;
+  height: 30px;
+  padding: 8px 12px;
+  padding-left: 8px;
+  background: #F4F4F4;
+  background-position: 90px;
+  border: 1px solid #E3E3E3;
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+.bike__options-name {
+  margin-left: 12px;
 }
 .bike__list-type {
   display: flex;

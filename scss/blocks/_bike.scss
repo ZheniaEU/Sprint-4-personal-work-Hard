@@ -3,7 +3,7 @@
    padding: 60px 0 40px;
    padding-left: 120/1440 * 100%;
    background-color: #f4f4f4;
-   outline: darkcyan 2px solid;
+
 
    &__description {
       margin-bottom: 120px;
@@ -17,6 +17,23 @@
       @include text(55px, 60px, 700);
       letter-spacing: -0.5px;
       color: #151515;
+   }
+
+   &__options{
+      @include text(11px, 14px, 600);
+      width: 114px;
+      height: 30px;
+      padding: 8px 12px;
+      padding-left: 8px;
+      background: #F4F4F4;
+      background-position: 90px;
+      border: 1px solid #E3E3E3;
+      box-sizing: border-box;
+      border-radius: 2px;
+   }
+
+   &__options-name{
+      margin-left: 12px;
    }
 
    //можно гридами, но я уже в этом макете гридов пожевал, в секции overview
