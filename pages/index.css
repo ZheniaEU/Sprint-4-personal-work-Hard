@@ -535,7 +535,7 @@
 }
 
 .bike {
-  padding: 60px 0 40px;
+  padding: 60px 0 60px;
   padding-left: 8.3333333333%;
   background-color: #f4f4f4;
 }
@@ -569,6 +569,11 @@
 }
 @media screen and (min-width: 320px) {
   .bike__title {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
     margin-bottom: 40px;
     padding-top: 40px;
     border-top: 1px solid #e3e3e3;
@@ -584,11 +589,16 @@
   height: 30px;
   padding-left: 8px;
   background: #f4f4f4;
+  background-image: url(../../images/buttons/birdie.svg);
+  background-repeat: no-repeat;
   background-position: 90px;
   border: 1px solid #e3e3e3;
   box-sizing: border-box;
   border-radius: 2px;
   visibility: hidden;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 @media screen and (min-width: 320px) {
   .bike__options {
@@ -637,7 +647,6 @@
 }
 .bike__cards {
   display: flex;
-  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -649,6 +658,22 @@
   padding: 0;
   margin-right: 30px;
 }
+@media screen and (min-width: 320px) {
+  .bike__list {
+    margin-right: 0;
+    padding: 14.95px 14.95px 16px;
+    background-color: #f4f4f4;
+    box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+  }
+  .bike__list:not(:first-child) {
+    visibility: hidden;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    padding: 0;
+  }
+}
 .bike__list:last-child {
   margin-right: 0;
 }
@@ -658,6 +683,15 @@
   background-color: #f4f4f4;
   border-radius: 20px;
   box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.2);
+}
+@media screen and (min-width: 320px) {
+  .bike__image {
+    width: 254.11px;
+    background-color: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+  }
 }
 .bike__link {
   cursor: pointer;
@@ -672,8 +706,37 @@
   margin: 0;
   padding: 0;
   margin-top: 20px;
-  margin-bottom: 20px;
   color: #151515;
+}
+@media screen and (min-width: 320px) {
+  .bike__name {
+    margin: 2.95px auto 0;
+  }
+}
+.bike__slider {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto 0;
+  padding: 0;
+}
+@media screen and (min-width: 320px) {
+  .bike__slider {
+    visibility: visible;
+  }
+}
+.bike__element {
+  width: 4px;
+  height: 4px;
+  margin-right: 5px;
+  background: #CACACA;
+  border-radius: 9999px;
+  list-style: none;
+}
+.bike__element:last-child {
+  margin: 0;
+}
+.bike__element_active {
+  background: #151515;
 }
 
 .training {

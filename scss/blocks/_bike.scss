@@ -1,6 +1,6 @@
 // мда в секции завели кроты:( не работает легче переделать чем разбираться., переделываем
 .bike {
-   padding: 60px 0 40px;
+   padding: 60px 0 60px;
    padding-left: 120/1440 * 100%;
    background-color: #f4f4f4;
 
@@ -28,6 +28,7 @@
       color: #151515;
 
       @media screen and (min-width: 320px) {
+         @include text(32px, 40px, 700);
          margin-bottom: 40px;
          padding-top: 40px;
          border-top: 1px solid #e3e3e3;
@@ -40,11 +41,14 @@
       height: 30px;
       padding-left: 8px;
       background: #f4f4f4;
+      background-image: url(../../images/buttons/birdie.svg);
+      background-repeat: no-repeat;
       background-position: 90px;
       border: 1px solid #e3e3e3;
       box-sizing: border-box;
       border-radius: 2px;
       visibility: hidden;
+      appearance: none;
 
       @media screen and (min-width: 320px) {
          visibility: visible;
@@ -97,7 +101,7 @@
    //переписыва заного -,-!😁
    &__cards {
       display: flex;
-      flex-wrap: wrap;
+      // flex-wrap: wrap;
       margin: 0;
       padding: 0;
       list-style-type: none;
@@ -109,6 +113,22 @@
       margin: 0;
       padding: 0;
       margin-right: 30px;
+
+      @media screen and (min-width: 320px) {
+         margin-right: 0;
+         padding: 14.95px 14.95px 16px;
+         background-color: #f4f4f4;
+         box-shadow: -20px 60px 220px rgb(0 0 0 / 20%);
+         border-radius: 20px;
+
+         &:not(:first-child) {
+            visibility: hidden; //престрелим горизонтальный скрол
+            overflow: hidden; //так, контрольный!
+            width: 0;
+            height: 0;
+            padding: 0;
+         }
+      }
 
       &:last-child {
          margin-right: 0;
@@ -123,6 +143,14 @@
       background-color: #f4f4f4;
       border-radius: 20px;
       box-shadow: -20px 60px 220px rgb(0 0 0 / 20%);
+
+      @media screen and (min-width: 320px) {
+         width: 254.11px;
+         background-color: none;
+         border-radius: 0;
+         box-shadow: none;
+         padding: 0;
+      }
    }
 
    &__link {
@@ -136,7 +164,40 @@
    &__name {
       @include text(18px, 22px, 600);
       margin-top: 20px;
-      margin-bottom: 20px;
       color: #151515;
+
+      @media screen and (min-width: 320px) {
+         margin: 2.95px auto 0;
+      }
+   }
+
+   //пощады! пощады сколько можно:( поп элементов
+
+   &__slider {
+      display: flex;
+      justify-content: center;
+      margin: 20px auto 0;
+      padding: 0;
+
+      @media screen and (min-width: 320px) {
+         visibility: visible;
+      }
+   }
+
+   &__element {
+      width: 4px;
+      height: 4px;
+      margin-right: 5px;
+      background: #CACACA;
+      border-radius: 9999px;
+      list-style: none;
+
+      &:last-child{
+         margin: 0;
+      }
+
+      &_active{
+         background: #151515;
+      }
    }
 }
