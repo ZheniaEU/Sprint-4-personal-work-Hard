@@ -50,71 +50,6 @@
       // }
    }
 
-   //о этот бургер на 6 часов
-   &__burger {
-      display: flex;
-      flex-direction: column;
-      margin: 20px 20px 0 auto;
-      max-width: 100%;
-      overflow: hidden;
-      visibility: hidden;
-      cursor: pointer;
-
-      @media screen and (max-width: 600px) {
-         visibility: visible;
-      }
-   }
-
-   &__box {
-      display: flex;
-      justify-content: center;
-      width: 25px;
-      height: 25px;
-      position: absolute;
-      cursor: pointer;
-      opacity: 0;
-      z-index: 1;
-
-      &:checked ~ .header__burger_element_top {
-         background-color: #151515;
-         transform: rotate(45deg) translate(8.5px);
-      }
-
-      &:checked ~ .header__burger_element_middle {
-         background-color: #151515;
-         transform: rotate(495deg) translate(2px);
-      }
-
-      &:checked ~ .header__burger_element_bottom {
-         background-color: #151515;
-         transform: rotate(45deg);
-         opacity: 0;
-      }
-   }
-
-   &__burger-element {
-      margin-left: 2px;
-      margin-bottom: 5px;
-      width: 22px;
-      height: 3px;
-      margin-bottom: 5px;
-      background: #151515;
-      border: 3px;
-      transition: all 0.5s cubic-bezier(0.08, 0.81, 0.87, 0.71);
-      -webkit-transition: all 0.5s cubic-bezier(0.08, 0.81, 0.87, 0.71);
-      -moz-transition: all 0.5s cubic-bezier(0.08, 0.81, 0.87, 0.71);
-      -ms-transition: all 0.5s cubic-bezier(0.08, 0.81, 0.87, 0.71);
-      -o-transition: all 0.5s cubic-bezier(0.08, 0.81, 0.87, 0.71);
-   }
-
-   &__burger_element_top {
-      transform-origin: 3px -6px;
-   }
-
-   &__burger_element_bottom {
-      transform-origin: bottom left;
-   }
-
    //активный бургер
    &_active {
       //в макете 584пикселя вроде, но! у каждого телефона, своя высота, я изменил пиксели на всю высоту страницы
@@ -123,9 +58,6 @@
       flex-direction: column;
    }
 
-   &__burger_active {
-      margin-bottom: 97px;
-   }
    &__nav_active {
       flex-direction: column;
       visibility: visible;
