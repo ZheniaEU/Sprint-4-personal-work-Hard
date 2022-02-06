@@ -3,20 +3,32 @@
    padding-left: 120/1440 * 100%;
    background-color: #efefef;
 
-   &__titel {
-      @include text(24px, 32px, 700);
-      width: 229px;
+   @media screen and (min-width: 320px) {
+      padding: 60px 18px 16px;
+   }
 
+   &__titel {
+      @include text(24px, 32px, 600);
+      width: 229px;
       margin-bottom: 50px;
       color: #151515;
+
+      @media screen and (min-width: 320px) {
+         @include text(24px, 32px, 600);
+         margin-bottom: 40px;
+      }
    }
 
    &__form {
       position: relative;
       width: 360px;
-
       outline: 1px solid rgba(199, 199, 199, 0.5);
       margin-bottom: 100px;
+
+      @media screen and (min-width: 320px) {
+         width: 284px;
+         margin-bottom: 90px;
+      }
    }
 
    &__email {
@@ -31,6 +43,10 @@
       border-radius: 0;
       cursor: pointer;
 
+      @media screen and (min-width: 320px) {
+         width: 220px;
+      }
+
       &::placeholder {
          @include text(13px, 28px, 500);
          opacity: 70%;
@@ -41,10 +57,9 @@
          opacity: 1;
          border: none;
       }
-
    }
 
-   //тут есть кнопка но её не видно без джава скрипта :)
+   //тут есть кнопка но её не видно без JS :)
    &__button-submit {
       @include text(13px, 28px, 500);
       width: 18px;
@@ -69,11 +84,39 @@
    &__info {
       display: flex;
       justify-content: space-between;
-      margin-right: 120px;
+   }
+
+   &__copyright {
+      @include text(14px, 20px, 600);
+      margin: 0;
+      color: #cfcfcf;
+
+      @media screen and (min-width: 320px) {
+         @include text(14px, 20px, 500);
+         margin-top: 9px;
+      }
    }
 
    &__toggler {
       align-self: flex-end;
+      margin-right: 120px;
+
+      @media screen and (min-width: 320px) {
+         width: 0;
+         height: 0;
+         margin: 0;
+         padding: 0;
+         visibility: hidden;
+         overflow: hidden;
+      }
+
+      @media screen and (min-width: 600px) {
+         visibility: visible;
+         margin-right: 120px;
+         width: 136px;
+         height: 31.73px;
+         order: 3;
+      }
    }
 
    &__switch-light {
@@ -126,6 +169,17 @@
 
       &:checked:before {
          left: 22px;
+      }
+   }
+
+   &__logo {
+      width: 38px;
+      height: 38px;
+      order: 3;
+
+      @media screen and (min-width: 600px) {
+         visibility: hidden;
+         order: 2;
       }
    }
 }
