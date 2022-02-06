@@ -15,32 +15,23 @@
 
 <body class="root">
 
-   <header class="header">
-      <!-- <div class="popup"> < --- popup_opened -->
-      <!-- <div class="popup__page">
-            <input class="popup__burger" type="checkbox" />
-            <span class="popup__burger-element popup__burger_element_top"></span>
-            <span class="popup__burger-element popup__burger_element_middle"></span>
-            <span class="popup__burger-element popup__burger_element_bottom"></span>
-       
-         <nav class="popup__nav">
-            <a class="popup__links" href="#">Покрытия и градиенты</a>
-            <a class="popup__links" href="#">Велосипеды</a>
-            <a class="popup__links" href="#">Тренировки</a>
-         </nav>
+   <header class="header header_active">
+      <div class="header__burger header__burger_active">
+         <input class="header__box" type="checkbox" />
+         <span class="header__burger-element header__burger_element_top"></span>
+         <span class="header__burger-element header__burger_element_middle"></span>
+         <span class="header__burger-element header__burger_element_bottom"></span>
       </div>
-         <div class="footer__toggler">
-            <img class="footer__switch-light" src="./images/buttons/light.svg" alt="кнопка светлой темы">
-            <input class="footer__checkbox" type="checkbox"></input>
-            <img class="footer__switch-dark" src="./images/buttons/dark.svg" alt="кнопка тёмной темы">
-         </div>
-      </div> -->
-      <!-- <button class="header__burger" type="button">к</button> -->
-      <nav class="header__nav">
-         <a class="header__links" href="#">Покрытия и градиенты</a>
-         <a class="header__links" href="#">Велосипеды</a>
-         <a class="header__links" href="#">Тренировки</a>
+      <nav class="header__nav header__nav_active">
+         <a class="header__links header__links_active" href="#">Покрытия и градиенты</a>
+         <a class="header__links header__links_active" href="#">Велосипеды</a>
+         <a class="header__links header__links_active" href="#">Тренировки</a>
       </nav>
+      <div class="toggler">
+         <img class="footer__switch-light" src="./images/buttons/light.svg" alt="кнопка светлой темы">
+         <input class="footer__checkbox" type="checkbox"></input>
+         <img class="footer__switch-dark" src="./images/buttons/dark.svg" alt="кнопка тёмной темы">
+      </div>
 
    </header>
    <main class="content">
@@ -104,38 +95,38 @@
                </li>
             </ul>
          </div>
-            <ul class="bike__cards">
-               <li class="bike__list">
-                  <a class="bike__link"
-                     href="https://www.sigmasports.com/item/Cervelo/Caledonia-5-Ultegra-Disc-Road-Bike-2021/RDEN"
-                     target="_blanck">
-                     <img class="bike__image" src="./images/Cervelo-Caledonia-5.png" alt="Cervelo Caledonia-5">
-                  </a>
-                  <p class="bike__name">Cervelo Caledonia-5</p>
-               </li>
-               <li class="bike__list">
-                  <a class="bike__link"
-                     href="https://www.sigmasports.com/item/Cannondale/SystemSix-HiMOD-Ultegra-Di2-Disc-Road-Bike-2021/R82J"
-                     target="_blanck">
-                     <img class="bike__image" src="./images/Cannondale-Systemsix-Himod.png"
-                        alt="Cannondale Systemsix Himod">
-                  </a>
-                  <p class="bike__name">Cannondale Systemsix Himod</p>
-               </li>
-               <li class="bike__list">
-                  <a class="bike__link"
-                     href="https://www.sigmasports.com/item/Trek/Domane-SL-7-Force-eTap-AXS-Disc-Road-Bike-2021/RULF"
-                     target="_blanck">
-                     <img class="bike__image" src="./images/Trek-Domane-SL-7.png" alt="Trek Domane SL-7">
-                  </a>
-                  <p class="bike__name">Trek Domane SL-7</p>
-               </li>
-            </ul>
-            <ul class="bike__slider">
-               <li class="bike__element bike__element_active"></li>
-               <li class="bike__element"></li>
-               <li class="bike__element"></li>
-            </ul>
+         <ul class="bike__cards">
+            <li class="bike__list">
+               <a class="bike__link"
+                  href="https://www.sigmasports.com/item/Cervelo/Caledonia-5-Ultegra-Disc-Road-Bike-2021/RDEN"
+                  target="_blanck">
+                  <img class="bike__image" src="./images/Cervelo-Caledonia-5.png" alt="Cervelo Caledonia-5">
+               </a>
+               <p class="bike__name">Cervelo Caledonia-5</p>
+            </li>
+            <li class="bike__list">
+               <a class="bike__link"
+                  href="https://www.sigmasports.com/item/Cannondale/SystemSix-HiMOD-Ultegra-Di2-Disc-Road-Bike-2021/R82J"
+                  target="_blanck">
+                  <img class="bike__image" src="./images/Cannondale-Systemsix-Himod.png"
+                     alt="Cannondale Systemsix Himod">
+               </a>
+               <p class="bike__name">Cannondale Systemsix Himod</p>
+            </li>
+            <li class="bike__list">
+               <a class="bike__link"
+                  href="https://www.sigmasports.com/item/Trek/Domane-SL-7-Force-eTap-AXS-Disc-Road-Bike-2021/RULF"
+                  target="_blanck">
+                  <img class="bike__image" src="./images/Trek-Domane-SL-7.png" alt="Trek Domane SL-7">
+               </a>
+               <p class="bike__name">Trek Domane SL-7</p>
+            </li>
+         </ul>
+         <ul class="bike__slider">
+            <li class="bike__element bike__element_active"></li>
+            <li class="bike__element"></li>
+            <li class="bike__element"></li>
+         </ul>
       </section>
 
       <section class="training">
@@ -163,7 +154,8 @@
          </form>
          <div class="footer__info">
             <p class="footer__copyright">&copy; Road Club 2021</p>
-            <img class="footer__logo" src="./images/logo.svg" alt="логотип от Лебедева, можно только догодатся по названию, что это логотив в макете">
+            <img class="footer__logo" src="./images/logo.svg"
+               alt="логотип от Лебедева, можно только догодатся по названию, что это логотив в макете">
             <div class="footer__toggler">
                <img class="footer__switch-light" src="./images/buttons/light.svg" alt="кнопка светлой темы">
                <input class="footer__checkbox" type="checkbox"></input>

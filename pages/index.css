@@ -22,10 +22,17 @@
   outline: purple 2px solid;
   position: relative;
 }
+@media screen and (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    justify-content: start;
+  }
+}
 .header__nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 120px;
 }
 @media screen and (max-width: 600px) {
   .header__nav {
@@ -46,10 +53,83 @@
   opacity: 75%;
 }
 .header__links:last-child {
-  margin-right: 120px;
+  margin-right: 0;
 }
 .header__links:focus {
   outline: 3px solid dodgerblue;
+}
+.header__burger {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 20px 0 auto;
+  max-width: 100%;
+  overflow: hidden;
+  visibility: hidden;
+  cursor: pointer;
+}
+@media screen and (max-width: 600px) {
+  .header__burger {
+    visibility: visible;
+  }
+}
+.header__box {
+  display: flex;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 1;
+}
+.header__box:checked ~ .header__burger_element_top {
+  background-color: #151515;
+  transform: rotate(45deg) translate(8.5px);
+}
+.header__box:checked ~ .header__burger_element_middle {
+  background-color: #151515;
+  transform: rotate(495deg) translate(2px);
+}
+.header__box:checked ~ .header__burger_element_bottom {
+  background-color: #151515;
+  transform: rotate(45deg);
+  opacity: 0;
+}
+.header__burger-element {
+  margin-left: 2px;
+  margin-bottom: 5px;
+  width: 22px;
+  height: 3px;
+  margin-bottom: 5px;
+  background: #151515;
+  border: 3px;
+  transition: all 0.5s cubic-bezier(0.08, 0.81, 0.87, 0.71);
+  -webkit-transition: all 0.5s cubic-bezier(0.08, 0.81, 0.87, 0.71);
+  -moz-transition: all 0.5s cubic-bezier(0.08, 0.81, 0.87, 0.71);
+  -ms-transition: all 0.5s cubic-bezier(0.08, 0.81, 0.87, 0.71);
+  -o-transition: all 0.5s cubic-bezier(0.08, 0.81, 0.87, 0.71);
+}
+.header__burger_element_top {
+  transform-origin: 3px -6px;
+}
+.header__burger_element_bottom {
+  transform-origin: bottom left;
+}
+.header_active {
+  height: 100vh;
+  justify-content: start;
+  flex-direction: column;
+}
+.header__burger_active {
+  margin-bottom: 97px;
+}
+.header__nav_active {
+  flex-direction: column;
+  visibility: visible;
+  margin-right: 0;
+}
+.header__links_active {
+  margin: 0 0 32px;
 }
 
 .overview {
@@ -885,7 +965,7 @@
 @media screen and (min-width: 320px) {
   .footer__form {
     width: 284px;
-    margin-bottom: 90px;
+    margin-bottom: 88px;
   }
 }
 .footer__email {
@@ -1059,8 +1139,8 @@
   left: 22px;
 }
 .footer__logo {
-  width: 38px;
-  height: 38px;
+  width: 36px;
+  height: 36px;
   order: 3;
 }
 @media screen and (min-width: 600px) {
