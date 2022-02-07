@@ -62,13 +62,27 @@
   justify-content: start;
   flex-direction: column;
 }
-.header__nav_active {
+.header_active .burger {
+  margin-bottom: 97.66px;
+}
+.header_active .header__nav {
   flex-direction: column;
   visibility: visible;
   margin-right: 0;
 }
-.header__links_active {
+.header_active .header__nav .header__links {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
   margin: 0 0 32px;
+}
+.header_active .toggler {
+  visibility: visible;
+  margin: auto auto 36px;
+  width: 136px;
+  height: 28px;
 }
 .header_dark {
   background-color: #333;
@@ -1133,7 +1147,7 @@
 .burger {
   display: flex;
   flex-direction: column;
-  margin: 20px 20px 0 auto;
+  margin: 24px 18px 0 auto;
   max-width: 100%;
   overflow: hidden;
   visibility: hidden;
@@ -1187,14 +1201,14 @@
 .burger__element_bottom {
   transform-origin: bottom left;
 }
-.burger_active {
-  margin-bottom: 97px;
-}
 
+.toggler {
+  display: flex;
+}
 .toggler__checkbox {
   width: 44px;
   height: 24px;
-  margin-bottom: 2px;
+  margin-top: 2px;
   background: white;
   border-radius: 9999px;
   transition: 0.5s;
@@ -1226,16 +1240,23 @@
 .toggler__switch-light {
   width: 28px;
   height: 28px;
-  margin-right: 17px;
+  margin-right: 22px;
 }
 .toggler__switch-dark {
   width: 20px;
   height: 20px;
-  margin-left: 18px;
-  margin-bottom: 4px;
+  margin-left: 22px;
+  margin-top: 4.65px;
 }
-.toggler_header {
-  margin: auto auto 38px;
+@media screen and (min-width: 320px) {
+  .toggler_header {
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    visibility: hidden;
+    overflow: hidden;
+  }
 }
 .toggler_footer {
   align-self: flex-end;

@@ -50,6 +50,7 @@
    }
 
    //активный бургер
+   // уф переделываю в один модификатор
    &_active {
       //в макете 584пикселя вроде, но! у каждого телефона, своя высота, я изменил пиксели на всю высоту страницы
       height: 100vh;
@@ -57,14 +58,26 @@
       flex-direction: column;
    }
 
-   &__nav_active {
+   &_active .burger {
+      margin-bottom: 97.66px;
+   }
+
+   &_active .header__nav {
       flex-direction: column;
       visibility: visible;
       margin-right: 0;
    }
 
-   &__links_active {
+   &_active .header__nav .header__links {
+      @include text(18px, 18px, 500);
       margin: 0 0 32px;
+   }
+
+   &_active .toggler {
+      visibility: visible;
+      margin: auto auto 36px;
+      width: 136px;
+      height: 28px;
    }
 
    &_dark {
@@ -72,7 +85,7 @@
    }
 
    //мама папа я родил этот селектор. Я бог! потому что следующие селекторы буду рожать по этому образу и подобию 😇
-   &_dark .header__nav .header__links{
+   &_dark .header__nav .header__links {
       color: white;
 
       &:hover {
