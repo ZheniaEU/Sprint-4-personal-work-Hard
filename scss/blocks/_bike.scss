@@ -68,7 +68,6 @@
          width: 0;
          height: 0;
          margin: 0;
-
          overflow: hidden;
       }
    }
@@ -77,25 +76,30 @@
       @include text(18px, 28px, 600);
       margin-right: 40px;
       list-style: none;
-      opacity: 70%;
 
       &:last-child {
          margin: 0;
       }
    }
 
-   &__description-type_active {
-      color: #151515;
-      opacity: 1;
-   }
+   // &__description-type_active {
+   //    color: #151515;
+   //    opacity: 1;
+   // }
 
    &__links-name {
       color: #222;
       text-decoration: none;
+      opacity: 0.7;
 
       &:focus {
          outline: 3px solid dodgerblue;
       }
+   }
+
+   &__links-name_active {
+      color: #151515;
+      opacity: 1;
    }
 
    //переписыва заного -,-!😁
@@ -188,16 +192,37 @@
       width: 4px;
       height: 4px;
       margin-right: 5px;
-      background: #CACACA;
+      background: #cacaca;
       border-radius: 9999px;
       list-style: none;
 
-      &:last-child{
+      &:last-child {
          margin: 0;
       }
 
-      &_active{
+      &_active {
          background: #151515;
       }
+   }
+
+   &_dark {
+      background-color: #333;
+   }
+
+   &_dark .bike__description .bike__title {
+      color: white;
+   }
+
+   &_dark .bike__description .bike__list-type .bike__description-type .bike__links-name {
+      color: #e5e5e5;
+   }
+
+   &_dark .bike__description .bike__list-type .bike__description-type .bike__links-name_active {
+      color: white;
+   }
+
+   //записал елс я найду в себе силы доверстать вьюпорт, начать отсюда
+   &_dark .bike__cards .bike__list .bike__name {
+      color: white;
    }
 }

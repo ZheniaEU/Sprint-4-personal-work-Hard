@@ -3,7 +3,6 @@
    justify-content: flex-end;
    min-height: 74px;
    background-color: #f4f4f4;
-   outline: purple 2px solid;
    // max-width: 100%;
    position: relative;
 
@@ -25,7 +24,7 @@
 
    &__links {
       @include text(14px, 18px, 500);
-      color: $fcolor1;
+      color: #151515;
       margin-right: 34px;
       text-decoration: none;
 
@@ -66,5 +65,19 @@
 
    &__links_active {
       margin: 0 0 32px;
+   }
+
+   &_dark {
+      background-color: #333;
+   }
+
+   //мама папа я родил этот селектор. Я бог! потому что следующие селекторы буду рожать по этому образу и подобию 😇
+   &_dark .header__nav .header__links{
+      color: white;
+
+      &:hover {
+         //дайте дизайнеру по рукам уже за такое
+         opacity: 65%;
+      }
    }
 }

@@ -84,4 +84,20 @@
          grid-row: 2/3;
       }
    }
+
+   &_dark{
+      background-color: #333;
+   }
+
+   &_dark .training__titel{
+      color: white;
+   }
+
+   &_dark .training__description{
+      color: #E5E5E5;
+   }
+
+   &_dark .training__list .training__list-item .training__link{
+      color: white;
+   } 
 }

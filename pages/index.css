@@ -19,7 +19,6 @@
   justify-content: flex-end;
   min-height: 74px;
   background-color: #f4f4f4;
-  outline: purple 2px solid;
   position: relative;
 }
 @media screen and (max-width: 600px) {
@@ -70,6 +69,15 @@
 }
 .header__links_active {
   margin: 0 0 32px;
+}
+.header_dark {
+  background-color: #333;
+}
+.header_dark .header__nav .header__links {
+  color: white;
+}
+.header_dark .header__nav .header__links:hover {
+  opacity: 65%;
 }
 
 .overview {
@@ -241,7 +249,7 @@
     visibility: hidden;
   }
 }
-.overview__name:after {
+.overview__name:before {
   content: "";
   position: absolute;
   margin: 0;
@@ -250,6 +258,21 @@
   left: 224px;
   top: 9px;
   background: #d7d4d4;
+}
+.overview_dark {
+  background-color: #333;
+}
+.overview_dark .overview__title {
+  color: white;
+}
+.overview_dark .overview__text {
+  color: #E5E5E5;
+}
+.overview_dark .overview__name {
+  color: white;
+}
+.overview_dark .overview__name:before {
+  background: #707070;
 }
 
 .place {
@@ -349,6 +372,18 @@
     padding-bottom: 80px;
     border-bottom: 1px solid #e3e3e3;
   }
+}
+.place_dark {
+  background-color: #333;
+}
+.place_dark .place__description-container .place__title {
+  color: white;
+}
+.place_dark .place__description-container .place__text-container .place__name {
+  color: white;
+}
+.place_dark .place__description-container .place__text-container .place__name-description {
+  color: #E5E5E5;
 }
 
 .road {
@@ -553,6 +588,21 @@
     left: 8px;
   }
 }
+.road_dark {
+  background-color: #333;
+}
+.road_dark .road__title {
+  color: white;
+}
+.road_dark .road__subtitle {
+  color: #E5E5E5;
+}
+.road_dark .road__button {
+  background-color: #434343;
+}
+.road_dark .road__button:before {
+  border-color: white;
+}
 
 .bike {
   padding: 60px 0 60px;
@@ -649,21 +699,21 @@
   padding: 0;
   margin-right: 40px;
   list-style: none;
-  opacity: 70%;
 }
 .bike__description-type:last-child {
   margin: 0;
 }
-.bike__description-type_active {
-  color: #151515;
-  opacity: 1;
-}
 .bike__links-name {
   color: #222;
   text-decoration: none;
+  opacity: 0.7;
 }
 .bike__links-name:focus {
   outline: 3px solid dodgerblue;
+}
+.bike__links-name_active {
+  color: #151515;
+  opacity: 1;
 }
 .bike__cards {
   display: flex;
@@ -748,7 +798,7 @@
   width: 4px;
   height: 4px;
   margin-right: 5px;
-  background: #CACACA;
+  background: #cacaca;
   border-radius: 9999px;
   list-style: none;
 }
@@ -757,6 +807,21 @@
 }
 .bike__element_active {
   background: #151515;
+}
+.bike_dark {
+  background-color: #333;
+}
+.bike_dark .bike__description .bike__title {
+  color: white;
+}
+.bike_dark .bike__description .bike__list-type .bike__description-type .bike__links-name {
+  color: #e5e5e5;
+}
+.bike_dark .bike__description .bike__list-type .bike__description-type .bike__links-name_active {
+  color: white;
+}
+.bike_dark .bike__cards .bike__list .bike__name {
+  color: white;
 }
 
 .training {
@@ -865,6 +930,18 @@
     grid-row: 2/3;
   }
 }
+.training_dark {
+  background-color: #333;
+}
+.training_dark .training__titel {
+  color: white;
+}
+.training_dark .training__description {
+  color: #E5E5E5;
+}
+.training_dark .training__list .training__list-item .training__link {
+  color: white;
+}
 
 .footer {
   padding: 80px 0 60px;
@@ -918,6 +995,7 @@
   width: 300px;
   margin-left: 20px;
   padding: 0;
+  color: #151515;
   background-color: #efefef;
   outline: none;
   border: none;
@@ -1022,6 +1100,34 @@
     visibility: hidden;
     order: 2;
   }
+}
+.footer_dark {
+  background-color: #2f2f2f;
+}
+.footer_dark .footer__titel {
+  color: white;
+}
+.footer_dark .footer__form .footer__email {
+  color: white;
+  background-color: #2f2f2f;
+}
+.footer_dark .footer__form .footer__email::-moz-placeholder {
+  color: white;
+  opacity: 0.5;
+}
+.footer_dark .footer__form .footer__email:-ms-input-placeholder {
+  color: white;
+  opacity: 0.5;
+}
+.footer_dark .footer__form .footer__email::placeholder {
+  color: white;
+  opacity: 0.5;
+}
+.footer_dark .footer__form .footer__button-submit {
+  color: white;
+}
+.footer_dark .footer__info .footer__copyright {
+  color: #565656;
 }
 
 .burger {

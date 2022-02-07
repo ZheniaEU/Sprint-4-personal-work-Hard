@@ -37,6 +37,7 @@
       width: 300px;
       margin-left: 20px;
       padding: 0;
+      color: #151515;
       background-color: #efefef;
       outline: none;
       border: none;
@@ -106,5 +107,31 @@
          visibility: hidden;
          order: 2;
       }
+   }
+
+   &_dark {
+      background-color: #2f2f2f;
+   }
+
+   &_dark .footer__titel {
+      color: white;
+   }
+
+   &_dark .footer__form .footer__email {
+      color: white;
+      background-color: #2f2f2f;
+
+      &::placeholder {
+         color: white;
+         opacity: 0.5;
+      }
+   }
+
+   &_dark .footer__form .footer__button-submit {
+      color: white;
+   }
+
+   &_dark .footer__info .footer__copyright {
+      color: #565656;
    }
 }

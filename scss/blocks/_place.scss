@@ -5,8 +5,6 @@
    background-color: #f4f4f4;
    // outline: 2px solid seagreen;
 
-
-
    @media screen and (min-width: 320px) {
       padding: 0 18px;
       flex-direction: column;
@@ -61,7 +59,7 @@
          @include text(14px, 22px, 500);
       }
    }
-   
+
    &__name-description {
       @include text(16px, 28px, 400);
       margin-top: 6px;
@@ -75,5 +73,21 @@
          //дизайнера покусали кроты, эту линию еле еле видно, глаза сломать можно её делать, солнце чтоб в монитор светило только не хватает.
          border-bottom: 1px solid #e3e3e3;
       }
+   }
+
+   &_dark {
+      background-color: #333;
+   }
+
+   &_dark .place__description-container .place__title {
+      color: white;
+   }
+
+   &_dark .place__description-container .place__text-container .place__name {
+      color: white;
+   }
+
+   &_dark .place__description-container .place__text-container .place__name-description {
+      color: #E5E5E5;
    }
 }
