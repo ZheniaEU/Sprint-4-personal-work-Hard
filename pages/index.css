@@ -36,6 +36,7 @@
 @media screen and (max-width: 600px) {
   .header__nav {
     visibility: hidden;
+    height: 0;
   }
 }
 .header__links {
@@ -68,6 +69,7 @@
 .header_active .header__nav {
   flex-direction: column;
   visibility: visible;
+  height: 150px;
   margin-right: 0;
 }
 .header_active .header__nav .header__links {
