@@ -1,17 +1,16 @@
-   //о этот бургер на 6 часов
+//о этот бургер на 6 часов
 .burger {
-      display: flex;
-      flex-direction: column;
-      margin: 24px 18px 0 auto;
-      max-width: 100%;
-      overflow: hidden;
-      visibility: hidden;
-      cursor: pointer;
+   display: flex;
+   flex-direction: column;
+   margin: 24px 18px 0 auto;
+   max-width: 100%;
+   overflow: hidden;
+   visibility: hidden;
+   cursor: pointer;
 
-      @media screen and (max-width: 600px) {
-         visibility: visible;
-      }
-   
+   @media screen and (max-width: 600px) {
+      visibility: visible;
+   }
 
    &__box {
       display: flex;
@@ -62,5 +61,4 @@
    &__element_bottom {
       transform-origin: bottom left;
    }
-
 }

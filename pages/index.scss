@@ -4,9 +4,6 @@
 //подключаем шрифты
 @import "./../vendors/fonts/fonts.css";
 
-//константы
-@import "../scss/constants";
-
 //миксины
 @import "../scss/mixins";
 
@@ -15,9 +12,6 @@
 
 //хедер
 @import "../scss/blocks/header";
-
-//мейн
-@import "../scss/blocks/content";
 
 //овервью
 @import "../scss/blocks/overview";
