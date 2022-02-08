@@ -418,7 +418,7 @@
   background-color: #f4f4f4;
   border-bottom-right-radius: 18;
 }
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 701px) {
   .road {
     padding: 40px 18px 80px 18px;
     display: flex;
@@ -435,7 +435,7 @@
   letter-spacing: -0.5px;
   color: #151515;
 }
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 701px) {
   .road__title {
     font-size: 32px;
     line-height: 40px;
@@ -443,6 +443,7 @@
     margin: 0;
     padding: 0;
     margin-bottom: 40px;
+    min-width: 284px;
   }
 }
 .road__subtitle {
@@ -456,7 +457,7 @@
   color: #222;
   opacity: 70%;
 }
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 701px) {
   .road__subtitle {
     font-size: 12px;
     line-height: 18px;
@@ -471,7 +472,7 @@
   display: flex;
   margin-bottom: 50px;
 }
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 701px) {
   .road__image-container {
     order: 3;
     margin-bottom: 40px;
@@ -487,9 +488,9 @@
   background-image: url(../../images/road-back-gneen.svg);
   background-size: cover;
   position: absolute;
-  top: 344px;
+  bottom: 4%;
 }
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 701px) {
   .road__picture-description:before {
     width: 70px;
     height: 28px;
@@ -499,16 +500,17 @@
 }
 .road__picture-description:after {
   width: 50px;
-  height: 16px;
+  height: 28px;
+  margin-top: 12px;
   content: "";
   background-image: url(../../images/road1.svg);
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
-  top: 356px;
+  bottom: 4%;
   left: 16px;
 }
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 701px) {
   .road__picture-description:after {
     width: 35px;
     height: 12px;
@@ -525,12 +527,12 @@
   margin-right: 40px;
   max-width: 100%;
 }
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 701px) {
   .road__pictures {
     margin-right: 0;
   }
 }
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 701px) {
   .road__pictures:last-child {
     width: 0;
     margin-right: 0;
@@ -541,7 +543,7 @@
 .road__pictures:last-child {
   margin-right: 0;
 }
-.road__button_type_left, .road__button_type_right {
+.road__button {
   width: 50px;
   height: 50px;
   padding: 0;
@@ -551,18 +553,18 @@
   position: relative;
   border: none;
 }
-@media screen and (min-width: 320px) {
-  .road__button_type_left, .road__button_type_right {
+@media screen and (max-width: 701px) {
+  .road__button {
     width: 24px;
     height: 24px;
     margin-top: 7px;
   }
 }
-.road__button_type_left:hover, .road__button_type_right:hover {
+.road__button:hover {
   cursor: pointer;
   opacity: 60%;
 }
-.road__button_type_left:before, .road__button_type_right:before {
+.road__button:before {
   width: 9px;
   height: 9px;
   display: inline-flex;
@@ -572,8 +574,8 @@
   position: absolute;
   top: 20px;
 }
-@media screen and (min-width: 320px) {
-  .road__button_type_left:before, .road__button_type_right:before {
+@media screen and (max-width: 701px) {
+  .road__button:before {
     width: 5.5px;
     height: 5.5px;
     top: 8.5px;
@@ -581,16 +583,16 @@
     border-left: 1.2px solid #151515;
   }
 }
-.road__button_type_left:active, .road__button_type_right:active {
+.road__button:active {
   transform: scale(0.9);
 }
-.road__button_type_left:focus, .road__button_type_right:focus {
+.road__button:focus {
   outline: none;
 }
 .road__button_type_left {
   margin-right: 20px;
 }
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 701px) {
   .road__button_type_left {
     margin-left: auto;
     margin-right: 10px;
@@ -600,7 +602,7 @@
   left: 21px;
   transform: rotate(-45deg);
 }
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 701px) {
   .road__button_type_left:before {
     left: 10px;
   }
@@ -609,7 +611,7 @@
   left: 18px;
   transform: rotate(135deg);
 }
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 701px) {
   .road__button_type_right:before {
     left: 8px;
   }
@@ -621,7 +623,7 @@
   color: white;
 }
 .road_dark .road__subtitle {
-  color: #E5E5E5;
+  color: #e5e5e5;
 }
 .road_dark .road__button {
   background-color: #434343;
