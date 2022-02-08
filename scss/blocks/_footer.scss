@@ -3,7 +3,7 @@
    padding-left: 120/1440 * 100%;
    background-color: #efefef;
 
-   @media screen and (min-width: 320px) {
+   @media screen and (max-width: 740px) {
       padding: 60px 18px 16px;
    }
 
@@ -13,7 +13,7 @@
       margin-bottom: 50px;
       color: #151515;
 
-      @media screen and (min-width: 320px) {
+      @media screen and (max-width: 740px) {
          @include text(24px, 32px, 600);
          margin-bottom: 40px;
       }
@@ -25,7 +25,7 @@
       outline: 1px solid rgba(199, 199, 199, 0.5);
       margin-bottom: 100px;
 
-      @media screen and (min-width: 320px) {
+      @media screen and (max-width: 740px) {
          width: 284px;
          margin-bottom: 88px;
       }
@@ -44,7 +44,7 @@
       border-radius: 0;
       cursor: pointer;
 
-      @media screen and (min-width: 320px) {
+      @media screen and (max-width: 740px) {
          width: 220px;
       }
 
@@ -92,7 +92,7 @@
       margin: 0;
       color: #cfcfcf;
 
-      @media screen and (min-width: 320px) {
+      @media screen and (max-width: 740px) {
          @include text(14px, 20px, 500);
          margin-top: 9px;
       }

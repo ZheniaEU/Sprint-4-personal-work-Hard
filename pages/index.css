@@ -1020,7 +1020,7 @@
   padding-left: 8.3333333333%;
   background-color: #efefef;
 }
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 740px) {
   .footer {
     padding: 60px 18px 16px;
   }
@@ -1035,7 +1035,7 @@
   margin-bottom: 50px;
   color: #151515;
 }
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 740px) {
   .footer__titel {
     font-size: 24px;
     line-height: 32px;
@@ -1051,7 +1051,7 @@
   outline: 1px solid rgba(199, 199, 199, 0.5);
   margin-bottom: 100px;
 }
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 740px) {
   .footer__form {
     width: 284px;
     margin-bottom: 88px;
@@ -1074,7 +1074,7 @@
   border-radius: 0;
   cursor: pointer;
 }
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 740px) {
   .footer__email {
     width: 220px;
   }
@@ -1152,7 +1152,7 @@
   margin: 0;
   color: #cfcfcf;
 }
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 740px) {
   .footer__copyright {
     font-size: 14px;
     line-height: 20px;
