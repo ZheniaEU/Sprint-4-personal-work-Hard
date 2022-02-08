@@ -105,7 +105,7 @@
   justify-content: space-between;
   position: relative;
 }
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 1100px) {
   .overview {
     grid-template-rows: repeat 5;
     grid-template-columns: 100%;
@@ -125,7 +125,7 @@
   grid-column: 1/2;
   letter-spacing: -0.5px;
 }
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 1100px) {
   .overview__title {
     font-size: 32px;
     line-height: 40px;
@@ -147,7 +147,7 @@
   grid-column: 1/2;
   opacity: 0.7;
 }
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 1100px) {
   .overview__text {
     font-size: 12px;
     line-height: 18px;
@@ -162,12 +162,22 @@
   grid-column: 3/4;
   grid-row: 1/6;
 }
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 1100px) {
+  .overview__place {
+    grid-column: 1;
+    grid-row: 2/4;
+    width: calc(100% - 30px);
+    margin: 0 auto;
+    max-width: 60%;
+  }
+}
+@media screen and (max-width: 700px) {
   .overview__place {
     grid-column: 1;
     grid-row: 2/4;
     width: calc(100% - 30px);
     margin-left: 30px;
+    max-width: 100%;
   }
 }
 .overview__button {
@@ -176,9 +186,9 @@
   font-weight: 600;
   margin: 0;
   padding: 0;
-  margin-bottom: 167px;
   width: 180px;
   height: 50px;
+  margin-bottom: 167px;
   color: white;
   background-color: #24b47e;
   grid-column: 1/2;
@@ -203,7 +213,7 @@
   transform-origin: top;
   transform: rotateX(90deg);
 }
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 1100px) {
   .overview__button {
     margin-bottom: 0px;
   }
@@ -219,7 +229,7 @@
   position: -webkit-sticky;
   position: sticky;
 }
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 700px) {
   .overview__bike {
     width: 181px;
     height: 139px;
@@ -236,7 +246,7 @@
   box-sizing: border-box;
   position: relative;
 }
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 1100px) {
   .overview__sticky-container {
     display: block;
     grid-column: 1;
@@ -257,7 +267,7 @@
   padding: 0;
   position: relative;
 }
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 1100px) {
   .overview__name {
     grid-column: 1;
     grid-row: 3/4;
@@ -282,7 +292,7 @@
   color: white;
 }
 .overview_dark .overview__text {
-  color: #E5E5E5;
+  color: #e5e5e5;
 }
 .overview_dark .overview__name {
   color: white;
