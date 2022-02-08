@@ -2,6 +2,7 @@
 
 const toggler = document.querySelectorAll(".toggler__checkbox")
 
+const burger = document.querySelector(".burger__box")
 const header = document.querySelector(".header")
 const overview = document.querySelector(".overview")
 const place = document.querySelector(".place")
@@ -11,10 +12,9 @@ const training = document.querySelector(".training")
 const footer = document.querySelector(".footer")
 
 
-// жмяклер темы
+// жмяклер темы 
 toggler.forEach(checkbox => {
-   checkbox.addEventListener('change', function () {
-
+   checkbox.addEventListener('change', () => {
       header.classList.toggle("header_dark")
       overview.classList.toggle("overview_dark")
       place.classList.toggle("place_dark")
