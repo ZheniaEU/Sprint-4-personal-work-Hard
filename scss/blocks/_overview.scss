@@ -3,17 +3,15 @@
    padding-left: 120/1440 * 100%;
    background-color: #f4f4f4;
    display: grid;
-   grid-template-columns: minmax(200px, 410px) 10px minmax(200px, 610px); //2 колонкой отрегулировать лесопед.
+   grid-template-columns: minmax(200px, 410px) 10px minmax(200px, 610px);
    justify-content: space-between;
    position: relative;
-   // outline: aqua 2px solid;
 
    @media screen and (max-width: 1100px) {
       grid-template-rows: repeat 5;
       grid-template-columns: 100%;
       row-gap: 40px;
       padding: 40px 18px 80px;
-      // 80 до псевдо элемента следующий секции
    }
 
    &__title {
@@ -39,7 +37,6 @@
 
       @media screen and (max-width: 1100px) {
          @include text(12px, 18px, 400);
-         // margin-bottom: 40px;
       }
    }
 
@@ -65,35 +62,31 @@
       }
    }
 
-   &__button {
+   &__link {
       @include text(14px, 18px, 600);
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 180px;
       height: 50px;
       margin-bottom: 167px;
       color: white;
+      text-decoration: none;
       background-color: #24b47e;
       grid-column: 1/2;
       letter-spacing: 1px;
-
       border: 0;
       border-radius: 4px;
-
-      //Жёваная анимация! она заставила меня реально вспотеть!
-      //раскомментировать с 87 по 95 строчку чтобы увидеть анимацию задуманную как на макете, и закомментировать с 102 по 117
       background-image: linear-gradient(to left, #24b47e 50%, #319e75 50%);
       background-size: 200% 100%;
       background-position: 100%;
-      transition: 3s ease-out;
+      transition: 800ms ease;
+      transform-style: preserve-3d;
 
       &:hover {
          background-position: 0%;
          cursor: pointer;
       }
-
-      // в этом проекте завились кроты, они подняли чёрныё флаг и объявили что эта анимация захвачена!
-      // нам срочно нужен боевой батон чтоб отловить всех кротов! https://www.youtube.com/watch?v=Itoy8pOPsTc
-      transition: 800ms ease;
-      transform-style: preserve-3d;
 
       // &:after {
       //    top: 0%;
@@ -119,21 +112,17 @@
       }
    }
 
-   //что что с этой картинкой не так? что с ней происходит? срочно нужно поймать всех кротов!
    &__bike {
       display: block;
       padding: 20px 50px;
       background: #f4f4f4;
-      // 2 значения в макете, в слаке подсказали что лучше брать 20% а не 44%
       box-shadow: -20px 60px 220px rgba(0, 0, 0, 20%);
       border-radius: 20px;
       object-fit: cover;
       top: 0;
-      // box-sizing: content-box;
       position: sticky;
 
       @media screen and (max-width: 700px) {
-         //округлил и воткнул нормальные значения чтоб с макетом размеры сходились
          width: 181px;
          height: 139px;
          object-fit: contain;
@@ -142,10 +131,9 @@
       }
    }
 
-   //добавим обвёртку для нашего велосипеда, а то Печкин без обвёртки дальше не уедит, так как родитель грид и он к нему прибит гвоздями.
    &__sticky-container {
       padding: 372px 0 79px 0;
-      right: 50px; //очень интересная штука получается, в зависимости от отступа, мы получаем котящийся велосипед и визуально он катится либо в право, либо в лево. Я сделал так чтоб он визуально катился в право как на макете
+      right: 50px;
       grid-column: 2;
       grid-row: 1/6;
       box-sizing: border-box;
@@ -168,7 +156,6 @@
       @include text(18px, 18px, 400);
       position: relative;
 
-      // ныкаем! всё что не нужно в кротывые норы которые остались нам от кротов!
       @media screen and (max-width: 1100px) {
          grid-column: 1;
          grid-row: 3/4;
