@@ -587,30 +587,30 @@
 .road__button:focus {
   outline: none;
 }
-.road__button_type_left {
+.road__button_type_prev {
   margin-right: 20px;
 }
 @media screen and (max-width: 701px) {
-  .road__button_type_left {
+  .road__button_type_prev {
     margin-left: auto;
     margin-right: 10px;
   }
 }
-.road__button_type_left:before {
+.road__button_type_prev:before {
   left: 21px;
   transform: rotate(-45deg);
 }
 @media screen and (max-width: 701px) {
-  .road__button_type_left:before {
+  .road__button_type_prev:before {
     left: 10px;
   }
 }
-.road__button_type_right:before {
+.road__button_type_next:before {
   left: 18px;
   transform: rotate(135deg);
 }
 @media screen and (max-width: 701px) {
-  .road__button_type_right:before {
+  .road__button_type_next:before {
     left: 8px;
   }
 }

@@ -165,7 +165,7 @@
       }
    }
 
-   &__button_type_left {
+   &__button_type_prev {
       margin-right: 20px;
 
       @media screen and (max-width: 701px) {
@@ -183,7 +183,7 @@
       }
    }
 
-   &__button_type_right {
+   &__button_type_next {
       &:before {
          left: 18px;
          transform: rotate(135deg);
