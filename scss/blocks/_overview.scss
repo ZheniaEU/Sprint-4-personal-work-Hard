@@ -188,19 +188,19 @@
       }
    }
 
-   &_dark {
+   &_theme_dark {
       background-color: #333;
    }
 
-   &_dark .overview__title {
+   &_theme_dark .overview__title {
       color: white;
    }
 
-   &_dark .overview__text {
+   &_theme_dark .overview__text {
       color: #e5e5e5;
    }
 
-   &_dark .overview__name {
+   &_theme_dark .overview__name {
       color: white;
 
       &:before {

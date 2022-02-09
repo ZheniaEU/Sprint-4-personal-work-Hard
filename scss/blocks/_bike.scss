@@ -237,23 +237,23 @@
       }
    }
 
-   &_dark {
+   &_theme_dark {
       background-color: #333;
    }
 
-   &_dark .bike__description .bike__title {
+   &_theme_dark .bike__description .bike__title {
       color: white;
    }
 
-   &_dark .bike__description .bike__list-type .bike__description-type .bike__links-name {
+   &_theme_dark .bike__description .bike__list-type .bike__description-type .bike__links-name {
       color: #e5e5e5;
    }
 
-   &_dark .bike__description .bike__list-type .bike__description-type .bike__links-name_active {
+   &_theme_dark .bike__description .bike__list-type .bike__description-type .bike__links-name_active {
       color: white;
    }
 
-   &_dark .bike__cards .bike__list .bike__name {
+   &_theme_dark .bike__cards .bike__list .bike__name {
       color: white;
       //А теперь доказательство что я самый лучший дизайнер и что весь блок выглядит так как нужно!
       //Дизайнер в фигме не показал мобильную версию тёмного дизайна.

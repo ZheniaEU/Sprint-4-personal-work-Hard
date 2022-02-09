@@ -5,7 +5,7 @@ const toggler = document.querySelectorAll(".toggler__checkbox")
 const burger = document.querySelector(".burger__box")
 
 //кнопка формы мыла
-const emailForm =document.querySelector(".footer__form")
+const emailForm = document.querySelector(".footer__form")
 const email = document.querySelector(".footer__email")
 const emailButton = document.querySelector(".footer__button-submit")
 
@@ -21,29 +21,29 @@ const footer = document.querySelector(".footer")
 // жмяклер темы 
 toggler.forEach(checkbox => {
    checkbox.addEventListener('change', () => {
-      header.classList.toggle("header_dark")
-      overview.classList.toggle("overview_dark")
-      place.classList.toggle("place_dark")
-      road.classList.toggle("road_dark")
-      bike.classList.toggle("bike_dark")
-      training.classList.toggle("training_dark")
-      footer.classList.toggle("footer_dark")
+      header.classList.toggle("header_theme_dark")
+      overview.classList.toggle("overview_theme_dark")
+      place.classList.toggle("place_theme_dark")
+      road.classList.toggle("road_theme_dark")
+      bike.classList.toggle("bike_theme_dark")
+      training.classList.toggle("training_theme_dark")
+      footer.classList.toggle("footer_theme_dark")
    })
 })
 
 //кнопка мыла
-email.addEventListener("click", function(){
+email.addEventListener("click", function () {
    emailButton.classList.add("footer__button-submit_active");
 })
 
 // при нажатии на кнопку "ок" появляется сообщение и блокируется доступ к кнопке и форме
-emailButton.addEventListener("click", function(){
-   email.value="Круто!";
+emailButton.addEventListener("click", function () {
+   email.value = "Круто!";
    emailButton.disabled = true;
    email.disabled = true;
 })
 
 // при перемещении курсора за границу элемента кнопка "ок" исчезает
-emailForm.addEventListener("mouseleave", function(){
+emailForm.addEventListener("mouseleave", function () {
    emailButton.classList.remove("footer__button-submit_active");
 })

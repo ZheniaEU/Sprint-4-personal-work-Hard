@@ -21,7 +21,6 @@
          margin-bottom: 40px;
          margin-right: 0;
          border-top: 1px solid #e3e3e3;
-        
       }
    }
 
@@ -75,19 +74,19 @@
       }
    }
 
-   &_dark {
+   &_theme_dark {
       background-color: #333;
    }
 
-   &_dark .place__description-container .place__title {
+   &_theme_dark .place__description-container .place__title {
       color: white;
    }
 
-   &_dark .place__description-container .place__text-container .place__name {
+   &_theme_dark .place__description-container .place__text-container .place__name {
       color: white;
    }
 
-   &_dark .place__description-container .place__text-container .place__name-description {
+   &_theme_dark .place__description-container .place__text-container .place__name-description {
       color: #e5e5e5;
    }
 }

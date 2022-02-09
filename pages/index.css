@@ -86,13 +86,13 @@
   width: 136px;
   height: 28px;
 }
-.header_dark {
+.header_theme_dark {
   background-color: #333;
 }
-.header_dark .header__nav .header__links {
+.header_theme_dark .header__nav .header__links {
   color: white;
 }
-.header_dark .header__nav .header__links:hover {
+.header_theme_dark .header__nav .header__links:hover {
   opacity: 65%;
 }
 
@@ -219,7 +219,7 @@
   box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   top: 0;
   position: -webkit-sticky;
   position: sticky;
@@ -229,7 +229,7 @@
     width: 181px;
     height: 139px;
     -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
     padding: 10.5px 26.5px;
   }
 }
@@ -280,19 +280,19 @@
   top: 9px;
   background: #d7d4d4;
 }
-.overview_dark {
+.overview_theme_dark {
   background-color: #333;
 }
-.overview_dark .overview__title {
+.overview_theme_dark .overview__title {
   color: white;
 }
-.overview_dark .overview__text {
+.overview_theme_dark .overview__text {
   color: #e5e5e5;
 }
-.overview_dark .overview__name {
+.overview_theme_dark .overview__name {
   color: white;
 }
-.overview_dark .overview__name:before {
+.overview_theme_dark .overview__name:before {
   background: #707070;
 }
 
@@ -311,7 +311,7 @@
 .place__image {
   margin-right: 6.0606060606%;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 @media screen and (max-width: 1050px) {
   .place__image {
@@ -394,16 +394,16 @@
     border-bottom: 1px solid #e3e3e3;
   }
 }
-.place_dark {
+.place_theme_dark {
   background-color: #333;
 }
-.place_dark .place__description-container .place__title {
+.place_theme_dark .place__description-container .place__title {
   color: white;
 }
-.place_dark .place__description-container .place__text-container .place__name {
+.place_theme_dark .place__description-container .place__text-container .place__name {
   color: white;
 }
-.place_dark .place__description-container .place__text-container .place__name-description {
+.place_theme_dark .place__description-container .place__text-container .place__name-description {
   color: #e5e5e5;
 }
 
@@ -611,19 +611,19 @@
     left: 8px;
   }
 }
-.road_dark {
+.road_theme_dark {
   background-color: #333;
 }
-.road_dark .road__title {
+.road_theme_dark .road__title {
   color: white;
 }
-.road_dark .road__subtitle {
+.road_theme_dark .road__subtitle {
   color: #e5e5e5;
 }
-.road_dark .road__button {
+.road_theme_dark .road__button {
   background-color: #434343;
 }
-.road_dark .road__button:before {
+.road_theme_dark .road__button:before {
   border-color: white;
 }
 
@@ -700,8 +700,8 @@
   border-radius: 2px;
   visibility: hidden;
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 @media screen and (max-width: 980px) {
   .bike__options {
@@ -869,23 +869,23 @@
 .bike__element_active {
   background: #151515;
 }
-.bike_dark {
+.bike_theme_dark {
   background-color: #333;
 }
-.bike_dark .bike__description .bike__title {
+.bike_theme_dark .bike__description .bike__title {
   color: white;
 }
-.bike_dark .bike__description .bike__list-type .bike__description-type .bike__links-name {
+.bike_theme_dark .bike__description .bike__list-type .bike__description-type .bike__links-name {
   color: #e5e5e5;
 }
-.bike_dark .bike__description .bike__list-type .bike__description-type .bike__links-name_active {
+.bike_theme_dark .bike__description .bike__list-type .bike__description-type .bike__links-name_active {
   color: white;
 }
-.bike_dark .bike__cards .bike__list .bike__name {
+.bike_theme_dark .bike__cards .bike__list .bike__name {
   color: white;
 }
 @media screen and (max-width: 1400px) {
-  .bike_dark .bike__cards .bike__list .bike__name {
+  .bike_theme_dark .bike__cards .bike__list .bike__name {
     color: hotpink;
   }
 }
@@ -896,7 +896,7 @@
   display: grid;
   grid-template-columns: minmax(180px, 460px) minmax(180px, 580px);
   -moz-column-gap: 12.1212121212%;
-       column-gap: 12.1212121212%;
+  column-gap: 12.1212121212%;
   grid-template-rows: repeat(2, auto) 1fr;
   background-color: #f4f4f4;
 }
@@ -904,14 +904,14 @@
   .training {
     padding: 0 18px 60px;
     -moz-column-gap: 20px;
-         column-gap: 20px;
+    column-gap: 20px;
   }
 }
 @media screen and (max-width: 1100px) {
   .training {
     row-gap: 40px;
     -moz-column-gap: 0;
-         column-gap: 0;
+    column-gap: 0;
     grid-template-columns: 100%;
   }
 }
@@ -1004,16 +1004,16 @@
     grid-row: 2/3;
   }
 }
-.training_dark {
+.training_theme_dark {
   background-color: #333;
 }
-.training_dark .training__titel {
+.training_theme_dark .training__titel {
   color: white;
 }
-.training_dark .training__description {
+.training_theme_dark .training__description {
   color: #e5e5e5;
 }
-.training_dark .training__list .training__list-item .training__link {
+.training_theme_dark .training__list .training__list-item .training__link {
   color: white;
 }
 
@@ -1171,35 +1171,35 @@
     order: 2;
   }
 }
-.footer_dark {
+.footer_theme_dark {
   background-color: #2f2f2f;
 }
-.footer_dark .footer__titel {
+.footer_theme_dark .footer__titel {
   color: white;
 }
-.footer_dark .footer__form .footer__email {
+.footer_theme_dark .footer__form .footer__email {
   color: white;
   background-color: #2f2f2f;
 }
-.footer_dark .footer__form .footer__email::-moz-placeholder {
+.footer_theme_dark .footer__form .footer__email::-moz-placeholder {
   color: white;
   opacity: 0.5;
 }
-.footer_dark .footer__form .footer__email:-ms-input-placeholder {
+.footer_theme_dark .footer__form .footer__email:-ms-input-placeholder {
   color: white;
   opacity: 0.5;
 }
-.footer_dark .footer__form .footer__email::placeholder {
+.footer_theme_dark .footer__form .footer__email::placeholder {
   color: white;
   opacity: 0.5;
 }
-.footer_dark .footer__form .footer__button-submit {
+.footer_theme_dark .footer__form .footer__button-submit {
   color: white;
 }
-.footer_dark .footer__info .footer__copyright {
+.footer_theme_dark .footer__info .footer__copyright {
   color: #565656;
 }
-.footer_dark .footer__button-submit {
+.footer_theme_dark .footer__button-submit {
   background-color: #2f2f2f;
   color: white;
 }
@@ -1274,7 +1274,7 @@
   transition: 0.5s;
   position: relative;
   -webkit-appearance: none;
-          appearance: none;
+  appearance: none;
   -moz-appearance: none;
 }
 .toggler__checkbox:focus {

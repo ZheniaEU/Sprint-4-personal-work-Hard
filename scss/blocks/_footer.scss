@@ -105,15 +105,15 @@
       }
    }
 
-   &_dark {
+   &_theme_dark {
       background-color: #2f2f2f;
    }
 
-   &_dark .footer__titel {
+   &_theme_dark .footer__titel {
       color: white;
    }
 
-   &_dark .footer__form .footer__email {
+   &_theme_dark .footer__form .footer__email {
       color: white;
       background-color: #2f2f2f;
 
@@ -123,15 +123,15 @@
       }
    }
 
-   &_dark .footer__form .footer__button-submit {
+   &_theme_dark .footer__form .footer__button-submit {
       color: white;
    }
 
-   &_dark .footer__info .footer__copyright {
+   &_theme_dark .footer__info .footer__copyright {
       color: #565656;
    }
 
-   &_dark .footer__button-submit{
+   &_theme_dark .footer__button-submit {
       background-color: #2f2f2f;
       color: white;
    }
