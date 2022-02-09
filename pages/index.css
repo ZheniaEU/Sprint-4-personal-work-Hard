@@ -226,6 +226,7 @@
   border-radius: 20px;
   -o-object-fit: cover;
      object-fit: cover;
+  top: 0;
   position: -webkit-sticky;
   position: sticky;
 }
@@ -444,6 +445,16 @@
     padding: 0;
     margin-bottom: 40px;
     min-width: 284px;
+  }
+}
+@media screen and (max-width: 401px) {
+  .road__title {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    min-width: 200px;
   }
 }
 .road__subtitle {
@@ -1200,6 +1211,10 @@
 }
 .footer_dark .footer__info .footer__copyright {
   color: #565656;
+}
+.footer_dark .footer__button-submit {
+  background-color: #2f2f2f;
+  color: white;
 }
 
 .burger {

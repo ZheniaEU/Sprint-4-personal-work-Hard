@@ -3,6 +3,12 @@
 const toggler = document.querySelectorAll(".toggler__checkbox")
 
 const burger = document.querySelector(".burger__box")
+
+//кнопка формы мыла
+const emailForm =document.querySelector(".footer__form")
+const email = document.querySelector(".footer__email")
+const emailButton = document.querySelector(".footer__button-submit")
+
 const header = document.querySelector(".header")
 const overview = document.querySelector(".overview")
 const place = document.querySelector(".place")
@@ -23,4 +29,21 @@ toggler.forEach(checkbox => {
       training.classList.toggle("training_dark")
       footer.classList.toggle("footer_dark")
    })
+})
+
+//кнопка мыла
+email.addEventListener("click", function(){
+   emailButton.classList.add("footer__button-submit_active");
+})
+
+// при нажатии на кнопку "ок" появляется сообщение и блокируется доступ к кнопке и форме
+emailButton.addEventListener("click", function(){
+   email.value="Круто!";
+   emailButton.disabled = true;
+   email.disabled = true;
+})
+
+// при перемещении курсора за границу элемента кнопка "ок" исчезает
+emailForm.addEventListener("mouseleave", function(){
+   emailButton.classList.remove("footer__button-submit_active");
 })
