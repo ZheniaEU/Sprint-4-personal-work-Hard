@@ -22,17 +22,17 @@
       opacity: 0;
       z-index: 1;
 
-      &:checked ~ .burger__element_top {
+      &:checked ~ .burger__element_line_top {
          background-color: #151515;
          transform: rotate(45deg) translate(8.5px);
       }
 
-      &:checked ~ .burger__element_middle {
+      &:checked ~ .burger__element_line_middle {
          background-color: #151515;
          transform: rotate(495deg) translate(2px);
       }
 
-      &:checked ~ .burger__element_bottom {
+      &:checked ~ .burger__element_line_bottom {
          background-color: #151515;
          transform: rotate(45deg);
          opacity: 0;
@@ -54,11 +54,11 @@
       -o-transition: all 0.5s cubic-bezier(0.08, 0.81, 0.87, 0.71);
    }
 
-   &__element_top {
+   &__element_line_top {
       transform-origin: 3px -6px;
    }
 
-   &__element_bottom {
+   &__element_line_bottom {
       transform-origin: bottom left;
    }
 }

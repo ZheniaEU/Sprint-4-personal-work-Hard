@@ -20,7 +20,6 @@
    }
 
    &__form {
-      position: relative;
       width: 360px;
       outline: 1px solid rgba(199, 199, 199, 0.5);
       margin-bottom: 100px;
@@ -71,9 +70,6 @@
       visibility: hidden;
       cursor: pointer;
       border: none;
-      position: absolute;
-      right: 22px;
-      top: 11px;
    }
 
    // показывает кнопку 111
