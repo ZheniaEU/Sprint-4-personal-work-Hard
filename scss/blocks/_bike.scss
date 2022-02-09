@@ -48,11 +48,12 @@
       @include text(11px, 14px, 600);
       width: 114px;
       height: 30px;
-      padding-left: 8px;
+      padding-left: 11px;
       background: #f4f4f4;
       background-image: url(../../images/buttons/birdie.svg);
       background-repeat: no-repeat;
       background-position: 90px;
+
       border: 1px solid #e3e3e3;
       box-sizing: border-box;
       border-radius: 2px;
@@ -200,6 +201,7 @@
       color: #151515;
 
       @media screen and (max-width: 1400px) {
+         @include text(14px, 18px, 600);
          margin: 2.95px auto 0;
       }
    }

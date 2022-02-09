@@ -20,14 +20,14 @@
       @media screen and (max-width: 701px) {
          @include text(32px, 40px, 700);
          margin-bottom: 40px;
-         min-width: 284px;
+
       }
 
-      @media screen and (max-width: 401px) {
-         @include text(32px, 40px, 700);
-
-         min-width: 200px;
-      }
+   //    @media screen and (max-width: 401px) {
+   //       @include text(32px, 40px, 700);
+   //       margin-bottom: 40px;
+   //       min-width: 200px;
+   //    }
    }
 
    &__subtitle {
@@ -63,7 +63,8 @@
          height: 40px;
          content: "";
          background-image: url(../../images/road-back-gneen.svg);
-         background-size: cover;
+         background-size: contain;
+         background-repeat: no-repeat;
          position: absolute;
          // top: 344px;
          bottom: 4%;

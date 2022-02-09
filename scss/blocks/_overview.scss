@@ -39,7 +39,7 @@
 
       @media screen and (max-width: 1100px) {
          @include text(12px, 18px, 400);
-         margin-bottom: 40px;
+         // margin-bottom: 40px;
       }
    }
 
@@ -80,39 +80,41 @@
 
       //Жёваная анимация! она заставила меня реально вспотеть!
       //раскомментировать с 87 по 95 строчку чтобы увидеть анимацию задуманную как на макете, и закомментировать с 102 по 117
-      // background-image: linear-gradient(to left, #24b47e 50%, #319e75 50%);
-      // background-size: 200% 100%;
-      // background-position: 100%;
-      // transition: 3s ease-out;
+      background-image: linear-gradient(to left, #24b47e 50%, #319e75 50%);
+      background-size: 200% 100%;
+      background-position: 100%;
+      transition: 3s ease-out;
 
-      // &:hover {
-      //    background-position: 0%;
-      //    cursor: pointer;
-      // }
+      &:hover {
+         background-position: 0%;
+         cursor: pointer;
+      }
 
       // в этом проекте завились кроты, они подняли чёрныё флаг и объявили что эта анимация захвачена!
       // нам срочно нужен боевой батон чтоб отловить всех кротов! https://www.youtube.com/watch?v=Itoy8pOPsTc
       transition: 800ms ease;
       transform-style: preserve-3d;
 
-      &:after {
-         top: 0%;
-         left: 0;
-         width: 100%;
-         position: absolute;
-         content: url(../../images/Flag_of_Edward_England.svg);
-         background-color: black;
-         transform-origin: top;
-         transform: rotateX(-90deg);
-      }
+      // &:after {
+      //    top: 0%;
+      //    left: 0;
+      //    width: 100%;
+      //    position: absolute;
+      //    content: url(../../images/Flag_of_Edward_England.svg);
+      //    background-color: black;
+      //    transform-origin: top;
+      //    transform: rotateX(-90deg);
+      // }
 
-      &:hover {
-         cursor: pointer;
-         transform-origin: top;
-         transform: rotateX(90deg);
-      }
+      // &:hover {
+      //    cursor: pointer;
+      //    transform-origin: top;
+      //    transform: rotateX(90deg);
+      // }
 
       @media screen and (max-width: 1100px) {
+         width: 284px;
+         height: 46px;
          margin-bottom: 0px;
       }
    }
