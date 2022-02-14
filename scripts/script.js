@@ -3,7 +3,7 @@
 const toggler = document.querySelectorAll(".toggler__checkbox")
 
 const burger = document.querySelector(".burger__box")
-
+const burgers = document.querySelector(".burgers")
 //кнопка формы мыла
 const emailForm = document.querySelector(".footer__form")
 const email = document.querySelector(".footer__email")
@@ -36,14 +36,19 @@ email.addEventListener("click", function () {
    emailButton.classList.add("footer__button-submit_active");
 })
 
-// при нажатии на кнопку "ок" появляется сообщение и блокируется доступ к кнопке и форме
+//кнопка формы
 emailButton.addEventListener("click", function () {
    email.value = "Круто!";
    emailButton.disabled = true;
    email.disabled = true;
 })
 
-// при перемещении курсора за границу элемента кнопка "ок" исчезает
+//кнопка формы
 emailForm.addEventListener("mouseleave", function () {
    emailButton.classList.remove("footer__button-submit_active");
 })
+
+// бургер
+burger.addEventListener("click", function() {
+   header.classList.toggle("header_active");
+ })

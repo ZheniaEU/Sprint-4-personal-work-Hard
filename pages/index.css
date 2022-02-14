@@ -86,6 +86,11 @@
   width: 136px;
   height: 28px;
 }
+.header_active .burgers {
+  background-image: url(../../images/buttons/burger-close.svg);
+  width: 25px;
+  height: 25px;
+}
 .header_theme_dark {
   background-color: #333;
 }

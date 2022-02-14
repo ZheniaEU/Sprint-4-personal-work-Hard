@@ -71,6 +71,12 @@
       height: 28px;
    }
 
+   &_active .burgers{
+      background-image: url(../../images/buttons/burger-close.svg);
+      width: 25px;
+      height: 25px;
+   }
+
    &_theme_dark {
       background-color: $primery-theme-dark-color;
    }
