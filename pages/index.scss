@@ -4,6 +4,9 @@
 //подключаем шрифты
 @import "./../vendors/fonts/fonts.css";
 
+//переменные
+@import "../scss/variables";
+
 //миксины
 @import "../scss/mixins";
 
@@ -36,6 +39,3 @@
 
 //тоглер
 @import "../scss/blocks/toggler";
-
-//переменные
-@import "../scss/variables"
