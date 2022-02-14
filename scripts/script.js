@@ -78,3 +78,81 @@ if (navLinks.length > 0) {
       }
    }
 }
+
+
+//подготовка карточки
+const bikesArray = [
+   {
+      name: "Cervelo Caledonia-5",
+      path: "./images/Highway/Cervelo-Caledonia-5.png",
+      link: "https://www.sigmasports.com/item/Cervelo/Caledonia-5-Ultegra-Disc-Road-Bike-2021/RDEN",
+   },
+   {
+      name: "Cannondale Systemsix Himod",
+      path: "./images/Highway/Cannondale-Systemsix-Himod.png",
+      link: "https://www.sigmasports.com/item/Cannondale/SystemSix-HiMOD-Ultegra-Di2-Disc-Road-Bike-2021/R82J",
+   },
+   {
+      name: "Trek Domane SL-7",
+      path: "./images/Highway/Trek-Domane-SL-7.png",
+      link: "https://www.sigmasports.com/item/Trek/Domane-SL-7-Force-eTap-AXS-Disc-Road-Bike-2021/RULF",
+   },
+
+
+
+   {
+      name: "Cervelo Aspero GRX 810",
+      path: "./images/Grevel/Cervelo-Aspero-GRX-810.png",
+      link: "https://www.sigmasports.com/item/Cervelo/Caledonia-5-Ultegra-Disc-Road-Bike-2021/RDEN",
+   },
+   {
+      name: "Specialized S-Works Diverge",
+      path: "./images/Grevel/Specialized-S-Works-Diverge.png",
+      link: "https://www.sigmasports.com/item/Cannondale/SystemSix-HiMOD-Ultegra-Di2-Disc-Road-Bike-2021/R82J",
+   },
+   {
+      name: "Cannondale Topstone Lefty 3",
+      path: "./images/Grevel/Cannondale-Topstone-Lefty-3.png",
+      link: "https://www.sigmasports.com/item/Trek/Domane-SL-7-Force-eTap-AXS-Disc-Road-Bike-2021/RULF",
+   },
+
+
+
+   {
+      name: "Specialized S-Works Shiv",
+      path: "./images/TT/Specialized-S-Works-Shiv.png",
+      link: "https://www.sigmasports.com/item/Cervelo/Caledonia-5-Ultegra-Disc-Road-Bike-2021/RDEN",
+   },
+   {
+      name: "BMC Timemachine 01 ONE",
+      path: "./images/TT/BMC-Timemachine-01-ONE.png",
+      link: "https://www.sigmasports.com/item/Cannondale/SystemSix-HiMOD-Ultegra-Di2-Disc-Road-Bike-2021/R82J",
+   },
+   {
+      name: "Cervelo P-Series",
+      path: "./images/TT/Cervelo-P-Series.png",
+      link: "https://www.sigmasports.com/item/Trek/Domane-SL-7-Force-eTap-AXS-Disc-Road-Bike-2021/RULF",
+   },
+
+
+]
+
+//подготовка слайдер
+
+const roadArray =[
+   {
+      title: "Шоссе",
+      subtitle: "На шоссейном велосипеде можно ездить по асфальту на разных градиентах: будь то горы или равнины. Гонки проходят в командном пелотоне, но тренироваться можно и самостоятельно.",
+      road: "./images/road1.svg",
+   },
+   {
+      title: "Грэвел",
+      subtitle: "Грэвел похож на шоссейный велосипед, но конструкция рамы немного отличается, и на нём стоят более широкие покрышки, всё для того чтобы проехать по лёгкому бездорожью.",
+      road: "./images/road2.svg",
+   },
+   {
+      title: "ТТ",
+      subtitle: "ТТ — это велосипед для триатлона или раздельного старта, гооняют на таком велике только по равнинному асфальту, велик очень быстрые и аэродинамичный.",
+      road: "./images/road3.svg",
+   },
+]
