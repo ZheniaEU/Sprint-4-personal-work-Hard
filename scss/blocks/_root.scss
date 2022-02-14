@@ -1,17 +1,13 @@
-//Почему я не могу использовать селектор по тегу? почему? я вышел на улицу с этим вопросом и задал его 100 случайным прохожим. "Не одного! ни одного вменяемого ответа я не услышал, наставник тоже не ответил"
-//Сам гугл молчит по этому поводу!
-//"Госпажа ревьюер почему? почему я не могу этого делать? что в этом креминального?
-//Я понимаю, что есть такое требование брифа, но мне интересно почему? Ничего не сломается! я не буду дублировать код!
 .root {
    max-width: 1440px;
    min-width: 300px;
    margin: 0 auto;
-   font-family: "Inter", Tahoma, sans-serif;
+   font-family: $font-family;
    text-rendering: optimizeLegibility;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
    -webkit-text-size-adjust: 100%;
    -ms-text-size-adjust: 100%;
    -moz-text-size-adjust: 100%;
-   background-color: #f4f4f4;
+   background-color: $primery-theme-light-color;
 }

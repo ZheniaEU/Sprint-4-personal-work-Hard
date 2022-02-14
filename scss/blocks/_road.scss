@@ -1,11 +1,10 @@
 .road {
    padding: 60px 0 60px;
    padding-left: 120/1440 * 100%;
-   background-color: #f4f4f4;
+   background-color: $primery-theme-light-color;
    border-bottom-right-radius: 18;
 
-   //аааа аааа аааа всё ясно, понятно. гридами бы я не почувствовал тут науроганить, ща я на флекбоксе помучаюсь:(
-   @media screen and (min-width: 320px) {
+   @media screen and (max-width: $width-media-small) {
       padding: 40px 18px 80px 18px;
       display: flex;
       flex-wrap: wrap;
@@ -15,9 +14,9 @@
       @include text(55px, 60px, 700);
       margin-bottom: 50px;
       letter-spacing: -0.5px;
-      color: #151515;
+      color: $primery-font-light-color;
 
-      @media screen and (min-width: 320px) {
+      @media screen and (max-width: $width-media-small) {
          @include text(32px, 40px, 700);
          margin-bottom: 40px;
       }
@@ -27,11 +26,10 @@
       @include text(18px, 28px, 400);
       max-width: 460px;
       margin-bottom: 80px;
-      color: #222;
+      color: $secondary-font-light-color;
       opacity: 70%;
 
-      @media screen and (min-width: 320px) {
-         // max-width: 284px;
+      @media screen and (max-width: $width-media-small) {
          @include text(12px, 18px, 400);
          padding-bottom: 0;
          order: 4;
@@ -42,7 +40,7 @@
       display: flex;
       margin-bottom: 50px;
 
-      @media screen and (min-width: 320px) {
+      @media screen and (max-width: $width-media-small) {
          order: 3;
          margin-bottom: 40px;
       }
@@ -52,35 +50,36 @@
       position: relative;
 
       &:before {
-         width: 100px; //2пикселя обрубил
+         width: 100px;
          height: 40px;
          content: "";
          background-image: url(../../images/road-back-gneen.svg);
-         background-size: cover;
+         background-size: contain;
+         background-repeat: no-repeat;
          position: absolute;
-         top: 344px;
+         bottom: 4%;
 
-         @media screen and (min-width: 320px) {
+         @media screen and (max-width: $width-media-small) {
             width: 70px;
             height: 28px;
             background-size: cover;
-            // top: calc(133 / 175 * 100%);
             top: 76%;
          }
       }
 
       &:after {
          width: 50px;
-         height: 16px;
+         height: 28px;
+         margin-top: 12px;
          content: "";
          background-image: url(../../images/road1.svg);
-         background-size: cover;
+         background-size: contain;
          background-repeat: no-repeat;
          position: absolute;
-         top: 356px;
+         bottom: 4%;
          left: 16px;
 
-         @media screen and (min-width: 320px) {
+         @media screen and (max-width: $width-media-small) {
             width: 35px;
             height: 12px;
             margin-top: 8px;
@@ -92,7 +91,6 @@
 
    &__image {
       max-width: 100%;
-      //доооооооооо я нашёл как прибить этого крота который делает отступ у картинки внизу! 😻
       vertical-align: bottom;
    }
 
@@ -100,11 +98,11 @@
       margin-right: 40px;
       max-width: 100%;
 
-      @media screen and (min-width: 320px) {
+      @media screen and (max-width: $width-media-small) {
          margin-right: 0;
       }
 
-      @media screen and (min-width: 320px) {
+      @media screen and (max-width: $width-media-small) {
          &:last-child {
             width: 0;
             margin-right: 0;
@@ -118,49 +116,7 @@
       }
    }
 
-   //Жёваная кнопка! кажется её погрызли кроты
-   //Это кнопки на svg
-   // &__button_type_left,&__button_type_right {
-   //    width: 50px;
-   //    height: 50px;
-   //    background-color: #ebebeb;
-   //    border-radius: 50px;
-   //    border: none;
-   //    position: relative;
-
-   //    &:hover{
-   //       cursor: pointer;
-   //       opacity: 60%;
-   //    }
-
-   //    &:before {
-   //       width: 9px;
-   //       height: 17px;
-   //       content: "";
-   //       object-fit: contain;
-   //       left: 18px;
-   //       top: 15px;
-   //       position: absolute;
-   //    }
-   // }
-
-   // &__button_type_left{
-   //    &:before{
-   //       background-image: url(../../images/buttons/Left.svg);
-   //    }
-   // }
-
-   //    &__button_type_right{
-   //    &:before{
-   //       background-image: url(../../images/buttons/Right.svg);
-   //       left: 22px;
-   //    }
-   // }
-
-   //В слаке сказали что кнопки можно без картинки нарисовать на css, вызов был принят!
-   //я надеюсь госпадин и и и и и или госпажа ревьер меня не покусает, так как совсем в пиксель пёрфект играть с кнопкой средствами css не хочеться
-   &__button_type_left,
-   &__button_type_right {
+   &__button {
       width: 50px;
       height: 50px;
       padding: 0;
@@ -170,7 +126,7 @@
       position: relative;
       border: none;
 
-      @media screen and (min-width: 320px) {
+      @media screen and (max-width: $width-media-small) {
          width: 24px;
          height: 24px;
          margin-top: 7px;
@@ -185,18 +141,18 @@
          width: 9px;
          height: 9px;
          display: inline-flex;
-         border-top: 2px solid #151515;
-         border-left: 2px solid #151515;
+         border-top: 2px solid $primery-font-light-color;
+         border-left: 2px solid $primery-font-light-color;
          content: "";
          position: absolute;
          top: 20px;
 
-         @media screen and (min-width: 320px) {
+         @media screen and (max-width: $width-media-small) {
             width: 5.5px;
             height: 5.5px;
             top: 8.5px;
-            border-top: 1.2px solid #151515;
-            border-left: 1.2px solid #151515;
+            border-top: 1.2px solid $primery-font-light-color;
+            border-left: 1.2px solid $primery-font-light-color;
          }
       }
 
@@ -208,10 +164,11 @@
          outline: none;
       }
    }
-   &__button_type_left {
+
+   &__button_type_prev {
       margin-right: 20px;
 
-      @media screen and (min-width: 320px) {
+      @media screen and (max-width: $width-media-small) {
          margin-left: auto;
          margin-right: 10px;
       }
@@ -220,42 +177,40 @@
          left: 21px;
          transform: rotate(-45deg);
 
-         @media screen and (min-width: 320px) {
+         @media screen and (max-width: $width-media-small) {
             left: 10px;
          }
       }
    }
 
-   &__button_type_right {
+   &__button_type_next {
       &:before {
          left: 18px;
          transform: rotate(135deg);
 
-         @media screen and (min-width: 320px) {
+         @media screen and (max-width: $width-media-small) {
             left: 8px;
          }
       }
    }
-   //ммм какие кнопочки получились и всего то 5 часов времени ушло 😲, чувствую нужно как то поэкономнее время распределять...
-   //мда только проблемка свойтво :active подсасывает свойство :focus и теперь при клике появляется аутлайн, я не знаю как решить эту проблему:( не использовать  :active?
 
-   &_dark {
-      background-color: #333;
+   &_theme_dark {
+      background-color: $primery-theme-dark-color;
    }
 
-   &_dark .road__title {
-      color: white;
+   &_theme_dark .road__title {
+      color: $primery-font-dark-color;
    }
 
-   &_dark .road__subtitle {
-      color: #E5E5E5;
+   &_theme_dark .road__subtitle {
+      color: $secondary-font-dark-color;
    }
 
-   &_dark .road__button {
-      background-color:  #434343;
+   &_theme_dark .road__button {
+      background-color: #434343;
 
-      &:before{
-         border-color: white;
+      &:before {
+         border-color: $primery-font-dark-color;
       }
    }
 }

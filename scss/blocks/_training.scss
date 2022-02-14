@@ -1,29 +1,31 @@
 .training {
-   //ладно ладно гриды, стоить уж доконца раскусить их, ну чтоб хапнуть кротовых нор побольше с адаптацие сразу и гридов и флексбокса и сравнить.
-   //плюс виден сразу обёрток меньше, минус в том что файловую структуру я сделал для флекс бокса и там был дополнительный див 20 минут тупил не понимал почему картинка во вторую колонку не идёт-,-
    padding: 150px 0 120px;
    padding-left: 120/1440 * 100%;
    display: grid;
-   grid-template-columns: minmax(180px, 460px) minmax(180px, 1fr);
+   grid-template-columns: minmax(180px, 460px) minmax(180px, 580px);
    column-gap: 160/1320 * 100%;
    grid-template-rows: repeat(2, auto) 1fr;
-   background-color: #f4f4f4;
+   background-color: $primery-theme-light-color;
 
-   @media screen and (min-width: 320px) {
+   @media screen and (max-width: $width-media-desktop) {
       padding: 0 18px 60px;
+      column-gap: 20px;
+   }
+
+   @media screen and (max-width: $width-media-wide) {
       row-gap: 40px;
       column-gap: 0;
       grid-template-columns: 100%;
    }
-   // а в грид ариа нельзя элементы друг на друга накладывать грид колум и грид роу даются особенно тяжко:(
 
    &__titel {
       @include text(55px, 60px, 700);
       letter-spacing: -0.5px;
-      margin-bottom: 50px;
-      color: #151515;
+      margin-top: 3px;
+      margin-bottom: 44px;
+      color: $primery-font-light-color;
 
-      @media screen and (min-width: 320px) {
+      @media screen and (max-width: $width-media-wide) {
          @include text(32px, 40px, 700);
          padding-top: 40px;
          border-top: 1px solid #e3e3e3;
@@ -33,14 +35,14 @@
    &__description {
       @include text(18px, 28px, 400);
       margin-bottom: 182px;
-      color: #222;
+      color: $secondary-font-light-color;
       opacity: 70%;
 
-      @media screen and (min-width: 320px) {
+      @media screen and (max-width: $width-media-wide) {
          @include text(12px, 18px, 400);
+         max-width: 580px;
          margin-bottom: 0;
       }
-
    }
 
    &__list {
@@ -60,10 +62,10 @@
 
    &__link {
       @include text(18px, 28px, 600);
-      color: #222;
+      color: $secondary-font-light-color;
       text-decoration: none;
 
-      @media screen and (min-width: 320px) {
+      @media screen and (max-width: $width-media-wide) {
          @include text(14px, 20px, 600);
          margin-bottom: 0;
       }
@@ -74,30 +76,31 @@
    }
 
    &__place {
-      width: 100%;
-      margin-left: auto;
+      width: 580px;
+
       grid-column: 2;
       grid-row: 1/4;
 
-      @media screen and (min-width: 320px) {
+      @media screen and (max-width: $width-media-wide) {
+         max-width: 100%;
          grid-column: 1;
          grid-row: 2/3;
       }
    }
 
-   &_dark{
-      background-color: #333;
+   &_theme_dark {
+      background-color: $primery-theme-dark-color;
    }
 
-   &_dark .training__titel{
-      color: white;
+   &_theme_dark .training__titel {
+      color: $primery-font-dark-color;
    }
 
-   &_dark .training__description{
-      color: #E5E5E5;
+   &_theme_dark .training__description {
+      color: $secondary-font-dark-color;
    }
 
-   &_dark .training__list .training__list-item .training__link{
-      color: white;
-   } 
+   &_theme_dark .training__link {
+      color: $primery-font-dark-color;
+   }
 }

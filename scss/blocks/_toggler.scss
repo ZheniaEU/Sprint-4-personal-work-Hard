@@ -1,13 +1,11 @@
 .toggler {
-   //что писать руками? я уверен что я много раз видел такой чекбокс
-   //к этому чекбоксу не мог приступить 3 дня так боялся его:*(
-   //уф в пиксель пёрфект сверстал вместе с отступами картинок, они чутка отличаются от макетных, но зато выглядят как на макете!
+   display: flex;
 
    &__checkbox {
       width: 44px;
       height: 24px;
-      margin-bottom: 2px;
-      background: white;
+      margin-top: 2px;
+      background: $primery-font-dark-color;
       border-radius: 9999px;
       transition: 0.5s;
       position: relative;
@@ -42,21 +40,28 @@
    &__switch-light {
       width: 28px;
       height: 28px;
-      margin-right: 17px;
+      margin-right: 22px;
    }
 
    &__switch-dark {
       width: 20px;
       height: 20px;
-      margin-left: 18px;
-      margin-bottom: 4px;
+      margin-left: 22px;
+      margin-top: 4.65px;
    }
 
-   &_header {
-      margin: auto auto 38px;
+   &_place_header {
+      @media screen and (min-width: 320px) {
+         width: 0;
+         height: 0;
+         margin: 0;
+         padding: 0;
+         visibility: hidden;
+         overflow: hidden;
+      }
    }
 
-   &_footer {
+   &_place_footer {
       align-self: flex-end;
       margin-right: 120px;
 
@@ -69,7 +74,7 @@
          overflow: hidden;
       }
 
-      @media screen and (min-width: 600px) {
+      @media screen and (min-width: $width-media-mobile) {
          visibility: visible;
          margin-right: 120px;
          width: 136px;

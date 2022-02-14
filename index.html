@@ -13,43 +13,68 @@
    <title>Вело проект</title>
 </head>
 
+<!-- 1.1 Все элементы из макета сверстаны Комментарии: .footer__button-submit, .road__picture-description:before не отображается на странице.
+
+Ответ: .footer__button-submit данное отображение мы не проходили, но я сделал как смог, конечно это не работает корректно как должно либо, но отображение я реализовал. Собственно кнопка была сделана, но не было js кода, как смог я его добавил...
+https://i.imgur.com/3oSAD2W.gif
+
+road__picture-description:before не отображается на странице.
+
+Ответ: отображается, прилагаю это зелёная плашка под белой изогнутой линией обозначающую дорогу. На гифки я комментирую кусок кода и она исчезает...  https://i.imgur.com/Lr89T3a.gif
+
+4.2 Абсолютное позиционирование не используется без непосредственной необходимости Комментарии: 
+Ответ:  .footer__button-submit поправлено
+.burger__box Элемент имеет абсолютное позиционирование потому-что, своим позиционированием он 3мя спанами наезжает на поле инпута(чекбокс) другими методами в поле инпута вы никак не поместите элементы. Бургер сделан с помощью спанов! а не с помощью бефо и авто или бекграунда имеджа. видево в виде гифки прилагаю про поле инпута  https://imgur.com/upCVlUg
+
+4.4 Любой интерактивный элемент имеет состояние наведения, состояние наведения берется из макета или используется прозрачность Комментарии: http://joxi.ru/1A5OKPxI4zQL7m не совпадает с макетом; не описано: http://joxi.ru/EA43LPziXvjZb2 http://joxi.ru/Q2KazNYTOy3ddr
+
+Ответ: cursor: pointer на месте, всё работает.
+https://imgur.com/Aqkq9Id https://i.imgur.com/3oSAD2W.gif
+
+Дополнительно.
+burger__box удалите лишний чек-бокс. Это не чек-бокс, а кнопка button с реализацией на js
+Ответ: Нас не учили делать бургер меню. Сделал как выучил сам. Сделал как смог. Сделал как чекбокс, сделал с анимацией. тут нет лишних обёрток, если считаете что там лишняя обёртка, закоментируйте её и посмотрите результат.
+
+.bike__element это должны быть кнопки button с атрибутами type
+Ответ: Не думаю что это кнопки размером 4 на 4 пикселя, это декоративная штуковина, которая насколько я понимаю по задумке, как я понимаю на мобильном экране должна с определённым интервалом автоматически листать слайдер велосипедов -->
+
 <body class="root">
 
-   <!--js нет так что всё ручками! 🙌 -->
-   <header class="header header_active header_dark"> <!--header_active header_dark-->
-      <div class="burger burger_active"> <!--burger_active -->
+   <header class="header">
+      <div class="burger">
          <input class="burger__box" type="checkbox" />
-         <span class="burger__element burger__element_top"></span>
-         <span class="burger__element burger__element_middle"></span>
-         <span class="burger__element burger__element_bottom"></span>
+         <span class="burger__element burger__element_line_top"></span>
+         <span class="burger__element burger__element_line_middle"></span>
+         <span class="burger__element burger__element_line_bottom"></span>
       </div>
-      <nav class="header__nav header__nav_active"> <!--header__nav_active -->
-         <a class="header__links header__links_active" href="#">Покрытия и градиенты</a> <!--header__links_active -->
-         <a class="header__links header__links_active" href="#">Велосипеды</a> <!--header__links_active -->
-         <a class="header__links header__links_active" href="#">Тренировки</a> <!--header__links_active -->
+      <nav class="header__nav">
+         <a class="header__links" data-goto=".road" href="#">Покрытия и градиенты</a>
+         <a class="header__links" data-goto=".bike" href="#">Велосипеды</a>
+         <a class="header__links" data-goto=".training" href="#">Тренировки</a>
       </nav>
-      <div class="toggler toggler_header">
+      <div class="toggler toggler_place_header">
          <img class="toggler__switch-light" src="./images/buttons/light.svg" alt="кнопка светлой темы">
-         <input class="toggler__checkbox" type="checkbox"></input>
+         <input class="toggler__checkbox" type="checkbox">
          <img class="toggler__switch-dark" src="./images/buttons/dark.svg" alt="кнопка тёмной темы">
       </div>
 
    </header>
-   <main class="content">
 
-      <section class="overview overview_dark"> <!--overview_dark-->
+   <main>
+
+      <section class="overview">
          <h1 class="overview__title">Шоссе, ТТ и&nbsp;Грэвел</h1>
          <p class="overview__text">Триатлонные старты, горные серпантины или грейвел заезды по живописным маршрутам –
             нужно только определиться с выбором велосипеда и отправиться в путь.</p>
          <div class="overview__sticky-container">
-            <img class="overview__bike" src="./images/Cannondale Systemsix-main.png" alt="Лесопед Cannondale Systemsix">
+            <img class="overview__bike" src="./images/Cannondale-Systemsix-main.png" alt="Лесопед Cannondale Systemsix">
          </div>
-         <button class="overview__button">Подробнее</button>
+         <a class="overview__link" href="#road">Подробнее</a>
          <img class="overview__place" src="./images/main-1.png" alt="лес и горы">
          <p class="overview__name">Cannondale Systemsix</p>
       </section>
 
-      <section class="place place_dark"> <!--place_dark-->
+      <section class="place">
          <img class="place__image" src="./images/place-1.png" alt="асфальтовая дорога у подножья холмов">
          <blockquote class="place__description-container">
             <h2 class="place__title">«Катайся много или мало, долго или коротко, как хочешь - но катайся»</h2>
@@ -60,7 +85,7 @@
          </blockquote>
       </section>
 
-      <section class="road road_dark"> <!--road_dark-->
+      <section class="road" id="road">
          <h2 class="road__title">Шоссе</h2>
          <p class="road__subtitle">На шоссейном велосипеде можно ездить по асфальту на разных градиентах: будь то горы
             или равнины. Гонки проходят в командном пелотоне, но тренироваться можно и самостоятельно.</p>
@@ -72,14 +97,14 @@
                <img class="road__image" src="./images/road-2.png" alt="дорога в лесу">
             </div>
          </div>
-         <button class="road__button road__button_type_left"></button>
-         <button class="road__button road__button_type_right"></button>
+         <button class="road__button road__button_type_prev" type="button"></button>
+         <button class="road__button road__button_type_next" type="button"></button>
       </section>
 
-      <section class="bike bike_dark"> <!--bike_dark-->
+      <section class="bike">
          <div class="bike__description">
             <h2 class="bike__title">Велосипеды</h2>
-            <select class="bike__options" name="" id="">
+            <select class="bike__options" name="places" id="places">
                <option class="bike__options-name" value="">Шоссе</option>
                <option class="bike__options-name" value="">Грэвел</option>
                <option class="bike__options-name" value="">TT</option>
@@ -89,27 +114,38 @@
                   <a class="bike__links-name bike__links-name_active" href="#">Шоссе</a>
                </li>
                <li class="bike__description-type">
-                  <a class="bike__links-name" href="#">Грэвел</a> <!--bike__links-name_active -->
+                  <a class="bike__links-name" href="#">Грэвел</a>
                </li>
                <li class="bike__description-type">
                   <a class="bike__links-name" href="#">TT</a>
                </li>
             </ul>
+            <!-- <div class="bike__list-type">
+               <label class="bike__description-type">Шоссе
+                  <input type="radio" name="bike" checked>
+               </label>
+               <label class="bike__description-type">Грэвел
+                  <input type="radio" name="bike">
+               </label>
+               <lebel class="bike__description-type">TT
+                  <input type="radio" name="bike">
+               </lebel>
+            </div> -->
          </div>
          <ul class="bike__cards">
             <li class="bike__list">
                <a class="bike__link"
                   href="https://www.sigmasports.com/item/Cervelo/Caledonia-5-Ultegra-Disc-Road-Bike-2021/RDEN"
-                  target="_blanck">
-                  <img class="bike__image" src="./images/Cervelo-Caledonia-5.png" alt="Cervelo Caledonia-5">
+                  target="_blank">
+                  <img class="bike__image" src="./images/Highway/Cervelo-Caledonia-5.png" alt="Cervelo Caledonia-5">
                </a>
                <p class="bike__name">Cervelo Caledonia-5</p>
             </li>
             <li class="bike__list">
                <a class="bike__link"
                   href="https://www.sigmasports.com/item/Cannondale/SystemSix-HiMOD-Ultegra-Di2-Disc-Road-Bike-2021/R82J"
-                  target="_blanck">
-                  <img class="bike__image" src="./images/Cannondale-Systemsix-Himod.png"
+                  target="_blank">
+                  <img class="bike__image" src="./images/Highway/Cannondale-Systemsix-Himod.png"
                      alt="Cannondale Systemsix Himod">
                </a>
                <p class="bike__name">Cannondale Systemsix Himod</p>
@@ -117,8 +153,8 @@
             <li class="bike__list">
                <a class="bike__link"
                   href="https://www.sigmasports.com/item/Trek/Domane-SL-7-Force-eTap-AXS-Disc-Road-Bike-2021/RULF"
-                  target="_blanck">
-                  <img class="bike__image" src="./images/Trek-Domane-SL-7.png" alt="Trek Domane SL-7">
+                  target="_blank">
+                  <img class="bike__image" src="./images/Highway/Trek-Domane-SL-7.png" alt="Trek Domane SL-7">
                </a>
                <p class="bike__name">Trek Domane SL-7</p>
             </li>
@@ -130,7 +166,7 @@
          </ul>
       </section>
 
-      <section class="training training_dark"> <!--training_dark-->
+      <section class="training">
          <h2 class="training__titel">Тренировки</h2>
          <p class="training__description">Чтобы найти маршрут для тренировки можно воспользоваться сервисом Komoot, а
             записать эти тренировки
@@ -138,35 +174,36 @@
             приложение Strava, а также это приложение позволит построить тренировочный план.</p>
          <ul class="training__list">
             <li class="training__list-item">
-               <a class="training__link" href="https://www.strava.com" target="_blink">Strava</a>
+               <a class="training__link" href="https://www.strava.com" target="_blank">Strava</a>
             </li>
             <li class="training__list-item">
-               <a class="training__link" href="https://www.komoot.com" target="_blink">Komoot</a>
+               <a class="training__link" href="https://www.komoot.com" target="_blank">Komoot</a>
             </li>
          </ul>
-         <img class="training__place" src="./images/training-1.png" alt="">
+         <img class="training__place" src="./images/training-1.png" alt="Шоссе в горах">
       </section>
 
-      <footer class="footer footer_dark">  <!--footer_dark-->
+      <footer class="footer">
          <h3 class="footer__titel">Подпишитесь на рассылку &mdash;</h3>
          <form class="footer__form">
-            <input class="footer__email" type="text" placeholder="Ваш e-mail">
+            <input class="footer__email" type="text" placeholder="Ваш e-mail" required>
             <button class="footer__button-submit" type="submit">ok</button>
          </form>
          <div class="footer__info">
             <p class="footer__copyright">&copy; Road Club 2021</p>
             <img class="footer__logo" src="./images/logo.svg"
                alt="логотип от Лебедева, можно только догодатся по названию, что это логотив в макете">
-            <div class="toggler toggler_footer">
+            <div class="toggler toggler_place_footer">
                <img class="toggler__switch-light" src="./images/buttons/light.svg" alt="кнопка светлой темы">
-               <input class="toggler__checkbox" type="checkbox"></input>
+               <input class="toggler__checkbox" type="checkbox">
                <img class="toggler__switch-dark" src="./images/buttons/dark.svg" alt="кнопка тёмной темы">
             </div>
          </div>
       </footer>
+
    </main>
 
-   <script src="script/script.js"></script>
+   <script src="scripts/script.js"></script>
 </body>
 
 </html>

@@ -2,13 +2,11 @@
    padding: 120px 0 60px;
    padding-left: 120/1440 * 100%;
    display: flex;
-   background-color: #f4f4f4;
-   // outline: 2px solid seagreen;
+   background-color: $primery-theme-light-color;
 
-   @media screen and (min-width: 320px) {
+   @media screen and (max-width: $width-media-wide) {
       padding: 0 18px;
       flex-direction: column;
-      // flex-wrap: wrap;
    }
 
    &__image {
@@ -16,11 +14,10 @@
 
       object-fit: contain;
 
-      @media screen and (min-width: 320px) {
-         padding-top: 20px;
+      @media screen and (max-width: $width-media-wide) {
+         padding-top: 22px;
          margin-bottom: 40px;
          margin-right: 0;
-         // max-width: calc(3 / 320 * 100%);
          border-top: 1px solid #e3e3e3;
       }
    }
@@ -31,7 +28,7 @@
       flex-direction: column;
       justify-content: space-between;
 
-      @media screen and (min-width: 320px) {
+      @media screen and (max-width: $width-media-wide) {
          margin: 0;
       }
    }
@@ -40,12 +37,12 @@
       @include text(34px, 44px, 600);
       max-width: 470px;
       margin: 0;
-      color: #151515;
+      color: $primery-font-light-color;
       letter-spacing: -0.5px;
 
-      @media screen and (min-width: 320px) {
+      @media screen and (max-width: $width-media-wide) {
          @include text(23px, 29px, 600);
-         margin-bottom: 40px;
+         margin-bottom: 38px;
       }
    }
 
@@ -53,9 +50,9 @@
       @include text(20px, 32px, 500);
       margin: 0;
       font-style: normal;
-      color: #151515;
+      color: $primery-font-light-color;
 
-      @media screen and (min-width: 320px) {
+      @media screen and (max-width: $width-media-wide) {
          @include text(14px, 22px, 500);
       }
    }
@@ -63,31 +60,30 @@
    &__name-description {
       @include text(16px, 28px, 400);
       margin-top: 6px;
-      color: #222;
+      color: $secondary-font-light-color;
       opacity: 0.7;
 
-      @media screen and (min-width: 320px) {
+      @media screen and (max-width: $width-media-wide) {
          @include text(10px, 16px, 400);
          margin-top: 4px;
          padding-bottom: 80px;
-         //дизайнера покусали кроты, эту линию еле еле видно, глаза сломать можно её делать, солнце чтоб в монитор светило только не хватает.
          border-bottom: 1px solid #e3e3e3;
       }
    }
 
-   &_dark {
-      background-color: #333;
+   &_theme_dark {
+      background-color: $primery-theme-dark-color;
    }
 
-   &_dark .place__description-container .place__title {
-      color: white;
+   &_theme_dark .place__title {
+      color: $primery-font-dark-color;
    }
 
-   &_dark .place__description-container .place__text-container .place__name {
-      color: white;
+   &_theme_dark .place__name {
+      color: $primery-font-dark-color;
    }
 
-   &_dark .place__description-container .place__text-container .place__name-description {
-      color: #E5E5E5;
+   &_theme_dark .place__name-description {
+      color: $secondary-font-dark-color;
    }
 }
