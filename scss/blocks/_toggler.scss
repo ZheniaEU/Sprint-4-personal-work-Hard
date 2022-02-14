@@ -5,7 +5,7 @@
       width: 44px;
       height: 24px;
       margin-top: 2px;
-      background: white;
+      background: $primery-font-dark-color;
       border-radius: 9999px;
       transition: 0.5s;
       position: relative;
@@ -74,7 +74,7 @@
          overflow: hidden;
       }
 
-      @media screen and (min-width: 600px) {
+      @media screen and (min-width: $width-media-mobile) {
          visibility: visible;
          margin-right: 120px;
          width: 136px;

@@ -1,28 +1,28 @@
 .bike {
    padding: 60px 0 60px;
    padding-left: 120/1440 * 100%;
-   background-color: #f4f4f4;
+   background-color: $primery-theme-light-color;
 
-   @media screen and (max-width: 1400px) {
+   @media screen and (max-width: $width-media-desktop) {
       padding: 0 0 80px 6%;
    }
 
-   @media screen and (max-width: 700px) {
+   @media screen and (max-width: $width-media-small) {
       padding: 0 18px 80px;
    }
 
    &__description {
       margin-bottom: 120px;
       margin-right: 120px;
-      max-width: 1400px;
+      max-width: $width-media-desktop;
       display: flex;
       justify-content: space-between;
 
-      @media screen and (max-width: 1400px) {
+      @media screen and (max-width: $width-media-desktop) {
          justify-content: start;
       }
 
-      @media screen and (max-width: 980px) {
+      @media screen and (max-width: $width-media-medium) {
          flex-direction: column;
          margin-bottom: 20px;
          padding-right: 0;
@@ -32,9 +32,9 @@
    &__title {
       @include text(55px, 60px, 700);
       letter-spacing: -0.5px;
-      color: #151515;
+      color: $primery-font-light-color;
 
-      @media screen and (max-width: 980px) {
+      @media screen and (max-width: $width-media-medium) {
          @include text(32px, 40px, 700);
          margin-bottom: 40px;
          padding-top: 40px;
@@ -47,7 +47,7 @@
       width: 114px;
       height: 30px;
       padding-left: 11px;
-      background: #f4f4f4;
+      background: $primery-theme-light-color;
       background-image: url(../../images/buttons/birdie.svg);
       background-repeat: no-repeat;
       background-position: 90px;
@@ -58,7 +58,7 @@
       visibility: hidden;
       appearance: none;
 
-      @media screen and (max-width: 980px) {
+      @media screen and (max-width: $width-media-medium) {
          visibility: visible;
       }
    }
@@ -71,7 +71,7 @@
       display: flex;
       align-items: flex-end;
 
-      @media screen and (max-width: 980px) {
+      @media screen and (max-width: $width-media-medium) {
          visibility: hidden;
          width: 0;
          height: 0;
@@ -79,7 +79,7 @@
          overflow: hidden;
       }
 
-      @media screen and (max-width: 1400px) {
+      @media screen and (max-width: $width-media-desktop) {
          margin-left: 150px;
       }
    }
@@ -95,7 +95,7 @@
    }
 
    &__links-name {
-      color: #222;
+      color: $secondary-font-light-color;
       text-decoration: none;
       opacity: 0.7;
 
@@ -105,7 +105,7 @@
    }
 
    &__links-name_active {
-      color: #151515;
+      color: $primery-font-light-color;
       opacity: 1;
    }
 
@@ -115,7 +115,7 @@
       padding: 0;
       list-style-type: none;
 
-      @media screen and (max-width: 1400px) {
+      @media screen and (max-width: $width-media-desktop) {
          margin-right: auto;
          margin-left: auto;
       }
@@ -128,7 +128,7 @@
       padding: 0;
       margin-right: 30px;
 
-      @media screen and (max-width: 700px) {
+      @media screen and (max-width: $width-media-small) {
          &:not(:first-child) {
             visibility: hidden;
             overflow: hidden;
@@ -138,7 +138,7 @@
          }
       }
 
-      @media screen and (max-width: 980px) {
+      @media screen and (max-width: $width-media-medium) {
          &:last-child {
             visibility: hidden;
             overflow: hidden;
@@ -148,10 +148,10 @@
          }
       }
 
-      @media screen and (max-width: 1400px) {
+      @media screen and (max-width: $width-media-desktop) {
          margin-right: 20px;
          padding: 14.95px 14.95px 16px;
-         background-color: #f4f4f4;
+         background-color: $primery-theme-light-color;
          box-shadow: -20px 60px 220px rgb(0 0 0 / 20%);
          border-radius: 20px;
       }
@@ -164,11 +164,11 @@
    &__image {
       display: block;
       padding: 20px;
-      background-color: #f4f4f4;
+      background-color: $primery-theme-light-color;
       border-radius: 20px;
       box-shadow: -20px 60px 220px rgb(0 0 0 / 20%);
 
-      @media screen and (max-width: 1400px) {
+      @media screen and (max-width: $width-media-desktop) {
          width: 254.11px;
          background-color: none;
          border-radius: 0;
@@ -188,9 +188,9 @@
    &__name {
       @include text(18px, 22px, 600);
       margin-top: 20px;
-      color: #151515;
+      color: $primery-font-light-color;
 
-      @media screen and (max-width: 1400px) {
+      @media screen and (max-width: $width-media-desktop) {
          @include text(14px, 18px, 600);
          margin: 2.95px auto 0;
       }
@@ -203,7 +203,7 @@
       padding: 0;
       visibility: hidden;
 
-      @media screen and (max-width: 980px) {
+      @media screen and (max-width: $width-media-medium) {
          visibility: visible;
       }
    }
@@ -221,30 +221,30 @@
       }
 
       &_active {
-         background: #151515;
+         background: $primery-font-light-color;
       }
    }
 
    &_theme_dark {
-      background-color: #333;
+      background-color: $primery-theme-dark-color;
    }
 
    &_theme_dark .bike__title {
-      color: white;
+      color: $primery-font-dark-color;
    }
 
    &_theme_dark .bike__links-name {
-      color: #e5e5e5;
+      color: $secondary-font-dark-color;
    }
 
    &_theme_dark .bike__links-name_active {
-      color: white;
+      color: $primery-font-dark-color;
    }
 
    &_theme_dark .bike__name {
-      color: white;
-      @media screen and (max-width: 1400px) {
-         color: white;
+      color: $primery-font-dark-color;
+      @media screen and (max-width: $width-media-desktop) {
+         color: $primery-font-dark-color;
       }
    }
 }

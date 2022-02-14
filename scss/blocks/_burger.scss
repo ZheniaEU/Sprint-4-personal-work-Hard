@@ -8,7 +8,7 @@
    visibility: hidden;
    cursor: pointer;
 
-   @media screen and (max-width: 600px) {
+   @media screen and (max-width: $width-media-mobile) {
       visibility: visible;
    }
 
@@ -23,17 +23,17 @@
       z-index: 1;
 
       &:checked ~ .burger__element_line_top {
-         background-color: #151515;
+         background-color: $primery-font-light-color;
          transform: rotate(45deg) translate(8.5px);
       }
 
       &:checked ~ .burger__element_line_middle {
-         background-color: #151515;
+         background-color: $primery-font-light-color;
          transform: rotate(495deg) translate(2px);
       }
 
       &:checked ~ .burger__element_line_bottom {
-         background-color: #151515;
+         background-color: $primery-font-light-color;
          transform: rotate(45deg);
          opacity: 0;
       }
@@ -45,7 +45,7 @@
       width: 22px;
       height: 3px;
       margin-bottom: 5px;
-      background: #151515;
+      background: $primery-font-light-color;
       border: 3px;
       transition: all 0.5s cubic-bezier(0.08, 0.81, 0.87, 0.71);
       -webkit-transition: all 0.5s cubic-bezier(0.08, 0.81, 0.87, 0.71);

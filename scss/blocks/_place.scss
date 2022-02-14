@@ -2,9 +2,9 @@
    padding: 120px 0 60px;
    padding-left: 120/1440 * 100%;
    display: flex;
-   background-color: #f4f4f4;
+   background-color: $primery-theme-light-color;
 
-   @media screen and (max-width: 1050px) {
+   @media screen and (max-width: $width-media-wide) {
       padding: 0 18px;
       flex-direction: column;
    }
@@ -14,7 +14,7 @@
 
       object-fit: contain;
 
-      @media screen and (max-width: 1050px) {
+      @media screen and (max-width: $width-media-wide) {
          padding-top: 22px;
          margin-bottom: 40px;
          margin-right: 0;
@@ -28,7 +28,7 @@
       flex-direction: column;
       justify-content: space-between;
 
-      @media screen and (max-width: 1050px) {
+      @media screen and (max-width: $width-media-wide) {
          margin: 0;
       }
    }
@@ -37,10 +37,10 @@
       @include text(34px, 44px, 600);
       max-width: 470px;
       margin: 0;
-      color: #151515;
+      color: $primery-font-light-color;
       letter-spacing: -0.5px;
 
-      @media screen and (max-width: 1050px) {
+      @media screen and (max-width: $width-media-wide) {
          @include text(23px, 29px, 600);
          margin-bottom: 38px;
       }
@@ -50,9 +50,9 @@
       @include text(20px, 32px, 500);
       margin: 0;
       font-style: normal;
-      color: #151515;
+      color: $primery-font-light-color;
 
-      @media screen and (max-width: 1050px) {
+      @media screen and (max-width: $width-media-wide) {
          @include text(14px, 22px, 500);
       }
    }
@@ -60,10 +60,10 @@
    &__name-description {
       @include text(16px, 28px, 400);
       margin-top: 6px;
-      color: #222;
+      color: $secondary-font-light-color;
       opacity: 0.7;
 
-      @media screen and (max-width: 1050px) {
+      @media screen and (max-width: $width-media-wide) {
          @include text(10px, 16px, 400);
          margin-top: 4px;
          padding-bottom: 80px;
@@ -72,18 +72,18 @@
    }
 
    &_theme_dark {
-      background-color: #333;
+      background-color: $primery-theme-dark-color;
    }
 
    &_theme_dark .place__title {
-      color: white;
+      color: $primery-font-dark-color;
    }
 
    &_theme_dark .place__name {
-      color: white;
+      color: $primery-font-dark-color;
    }
 
    &_theme_dark .place__name-description {
-      color: #e5e5e5;
+      color: $secondary-font-dark-color;
    }
 }

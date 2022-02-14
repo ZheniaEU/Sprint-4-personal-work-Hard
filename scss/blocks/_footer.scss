@@ -1,9 +1,9 @@
 .footer {
    padding: 80px 0 60px;
    padding-left: 120/1440 * 100%;
-   background-color: #efefef;
+   background-color: $secondary-theme-light-color;
 
-   @media screen and (max-width: 740px) {
+   @media screen and (max-width: $width-media-small) {
       padding: 60px 18px 16px;
    }
 
@@ -11,9 +11,9 @@
       @include text(24px, 32px, 600);
       width: 229px;
       margin-bottom: 50px;
-      color: #151515;
+      color: $primery-font-light-color;
 
-      @media screen and (max-width: 740px) {
+      @media screen and (max-width: $width-media-small) {
          @include text(24px, 32px, 600);
          margin-bottom: 40px;
       }
@@ -24,7 +24,7 @@
       outline: 1px solid rgba(199, 199, 199, 0.5);
       margin-bottom: 100px;
 
-      @media screen and (max-width: 740px) {
+      @media screen and (max-width: $width-media-small) {
          width: 284px;
          margin-bottom: 88px;
       }
@@ -36,21 +36,21 @@
       width: 300px;
       margin-left: 20px;
       padding: 0;
-      color: #151515;
-      background-color: #efefef;
+      color: $primery-font-light-color;
+      background-color: $secondary-theme-light-color;
       outline: none;
       border: none;
       border-radius: 0;
       cursor: pointer;
 
-      @media screen and (max-width: 740px) {
+      @media screen and (max-width: $width-media-small) {
          width: 220px;
       }
 
       &::placeholder {
          @include text(13px, 28px, 500);
          opacity: 70%;
-         color: #222;
+         color: $secondary-font-light-color;
       }
 
       &:hover::placeholder {
@@ -65,7 +65,7 @@
       height: 28px;
       margin: 0;
       padding: 0;
-      color: #151515;
+      color: $primery-font-light-color;
       visibility: hidden;
       cursor: pointer;
       border: none;
@@ -85,7 +85,7 @@
       margin: 0;
       color: #cfcfcf;
 
-      @media screen and (max-width: 740px) {
+      @media screen and (max-width: $width-media-small) {
          @include text(14px, 20px, 500);
          margin-top: 9px;
       }
@@ -96,32 +96,32 @@
       height: 36px;
       order: 3;
 
-      @media screen and (min-width: 600px) {
+      @media screen and (min-width: $width-media-mobile) {
          visibility: hidden;
          order: 2;
       }
    }
 
    &_theme_dark {
-      background-color: #2f2f2f;
+      background-color: $secondary--theme-dark-color;
    }
 
    &_theme_dark .footer__titel {
-      color: white;
+      color: $primery-font-dark-color;
    }
 
    &_theme_dark .footer__email {
-      color: white;
-      background-color: #2f2f2f;
+      color: $primery-font-dark-color;
+      background-color: $secondary--theme-dark-color;
 
       &::placeholder {
-         color: white;
+         color: $primery-font-dark-color;
          opacity: 0.5;
       }
    }
 
    &_theme_dark .footer__button-submit {
-      color: white;
+      color: $primery-font-dark-color;
    }
 
    &_theme_dark .footer__copyright {
@@ -129,7 +129,7 @@
    }
 
    &_theme_dark .footer__button-submit {
-      background-color: #2f2f2f;
-      color: white;
+      background-color: $secondary--theme-dark-color;
+      color: $primery-font-dark-color;
    }
 }

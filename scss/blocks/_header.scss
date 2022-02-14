@@ -2,11 +2,11 @@
    display: flex;
    justify-content: flex-end;
    min-height: 74px;
-   background-color: #f4f4f4;
+   background-color: $primery-theme-light-color;
    // max-width: 100%;
    position: relative;
 
-   @media screen and (max-width: 600px) {
+   @media screen and (max-width: $width-media-mobile) {
       flex-direction: column;
       justify-content: start;
    }
@@ -17,7 +17,7 @@
       align-items: center;
       margin-right: 120px;
 
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: $width-media-mobile) {
          visibility: hidden;
          height: 0;
       }
@@ -25,7 +25,7 @@
 
    &__links {
       @include text(14px, 18px, 500);
-      color: #151515;
+      color: $primery-font-light-color;
       margin-right: 34px;
       text-decoration: none;
 
@@ -72,11 +72,11 @@
    }
 
    &_theme_dark {
-      background-color: #333;
+      background-color: $primery-theme-dark-color;
    }
 
    &_theme_dark .header__links {
-      color: white;
+      color: $primery-font-dark-color;
 
       &:hover {
          opacity: 65%;
